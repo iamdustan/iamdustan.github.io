@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div id="post">
+{{ content }}
+</div>
+
+<aside>
+  <header>Related Posts</header>
+  <ul class="posts hfeed">
+    {% for post in site.related_posts limit:3 %}<li class="hentry"><span class="pubdate">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" class="title">{{ post.title }}</a></li>{% endfor %}
+  </ul>
+</aside>
+
