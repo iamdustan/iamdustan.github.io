@@ -4,10 +4,19 @@ title: Dustan Kasten
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
+  <h1>Entries</h1>
+  <ol class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="pubdate" datetime='{{post.date | date: "%Y-%m-%d"}}'>{{ post.date | date: "%B %d, %Y" }}</span>
+        <span>Posted in: 
+          {% for tag in post.tags %}
+            <a rel="tag" href="/tags/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+        <p class="summary">{{ post.summary }}</p>
+      </li>
     {% endfor %}
-  </ul>
+  </ol>
 </div>

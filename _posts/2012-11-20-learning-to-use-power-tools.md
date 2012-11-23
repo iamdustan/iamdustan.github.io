@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Learning to Use Power Tools
+tags:
+- tools
 ---
 
 {{ page.title }}
