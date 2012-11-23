@@ -1,14 +1,52 @@
 ---
 layout: default
 ---
-<div id="post">
-{{ content }}
+<div class="hentry" id="{{ page.id }}">
+  <h1 class="entry-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+  <div class="meta">
+    <abbr class="published updated" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</abbr>
+    <span class="entry-tags"><span class="visuallyhidden">Posted in: </span>
+      {% for tag in page.tags %}
+        <a rel="tag" href="/tags/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+    </span>
+  </div>
+
+  {% comment %}
+  <ul class="meta">
+    {% if page.categories != empty %}
+      <li>Categories:{% for t in page.categories %} <a href="/{{ t | cgi_escape }}/">{{ t }}</a>{% endfor %}</li>
+    {% endif %}
+    {% if page.tags != empty %}
+      <li>Tags:{% for t in page.tags %} <a rel="tag" href="/tags/#{{ t | cgi_escape }}">{{ t }}</a>{% endfor %}</li>
+    {% endif %}
+    <li>Meta:
+      <a href="{{ site.url }}{{ page.url }}" rel="bookmark">permalink</a>
+      <a href="{{ site.feed }}">atom</a>
+    </li>
+  </ul>
+  {% endcomment %}
+
+  <div class="entry-content">{{ content }}</div>
+
+  <ul class="posts">
+    {% assign p = page.previous %}{% if p %}
+    <li><span>Previous: {{ p.date | date_to_string }}</span> &raquo; <a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
+    {% assign p = page.next %}{% if p %}
+    <li><span>    Next: {{ p.date | date_to_string }}</span> &raquo; <a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
+  </ul>
 </div>
 
+
+{% comment %}
 <aside>
   <header>Related Posts</header>
   <ul class="posts hfeed">
     {% for post in site.related_posts limit:3 %}<li class="hentry"><span class="pubdate">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" class="title">{{ post.title }}</a></li>{% endfor %}
   </ul>
 </aside>
+{% endcomment %}
+
 

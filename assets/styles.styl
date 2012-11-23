@@ -330,8 +330,9 @@ body
   a
     DISPLAY_COPY()
     color PRIMARY
+    display inline-block
     font-size 3em
-    margin 1em 0
+    margin 0 0 1em
     text-decoration none
   span
     BODY_COPY()
@@ -354,11 +355,11 @@ body
 .content
   width 66%
 #footer
-  margin-left 4%
-  width 30%
+  margin-left 8%
+  width 27%
 
 .vcard
-  margin-top 3em
+  margin-top 0.16666em
   .fn
     BODY_COPY()
     color PRIMARY
@@ -386,6 +387,65 @@ body
       color darken(LIGHT, 40%)
 
 /* footer }}} */
+/* {{{ article */
+
+#home h1
+  display none
+
+.hfeed
+  list-style none
+  margin 0
+  padding 0
+
+.entry-title
+  color SECONDARY
+  font-size 2em
+  font-weight bold
+  margin 0
+  text-decoration none
+.entry-title a,
+a.entry-title
+  color SECONDARY
+  text-decoration none
+  &:focus,
+  &:hover
+    color TERTIARY
+
+.meta
+  BODY_COPY()
+  font-size 1.333em
+  margin 0.75em 0
+  .published,
+  .updated
+    color TERTIARY
+    font-style italic
+    border-bottom 0
+  /*
+  background lighten(LIGHT, 40%)
+  border-top 2px solid LIGHT
+  border-bottom 2px solid LIGHT
+  padding 0.333em 1.5em
+  */
+  .entry-tags
+    float right
+    font-family 'Lucida Grande'
+    font-size 0.75em
+    margin-top 0.333em
+a[rel='tag']
+  text-decoration none
+ 
+.entry-summary,
+.entry-content
+  BODY_COPY()
+  font-size 1.111em
+  line-height 1.6
+  p
+    margin 0
+  p + p
+    text-indent 1.8em
+
+
+/* article }}} */
 /* {{{ 35em min-width */
 @media only screen and (min-width: 35em)
   // nothing here

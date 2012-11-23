@@ -3,10 +3,8 @@ layout: post
 title: Learning to Use Power Tools
 tags:
 - tools
+summary: Recently I&rsquo;ve had the pleasure of using tools. But not just hammers and screwdrivers, but some real, powerful tools that I have not enough chest hair to wield. 
 ---
-
-{{ page.title }}
-================
 
 Recently I&rsquo;ve had the pleasure of using tools. But not just hammers and screwdrivers, but some real, powerful tools that I have not enough chest hair to wield. 
 
