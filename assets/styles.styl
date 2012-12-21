@@ -327,6 +327,7 @@ body
 /*{{{ header */
 
 #masthead
+  position relative
   a
     DISPLAY_COPY()
     color PRIMARY
@@ -334,7 +335,7 @@ body
     font-size 3em
     margin 0 0 1em
     text-decoration none
-  span
+  p
     BODY_COPY()
     color: darken(LIGHT, 50%)
     display inline-block
@@ -342,9 +343,19 @@ body
     border-top: 2px solid darken(LIGHT, 15%)
     border-bottom: 2px solid darken(LIGHT, 15%)
     position absolute
-    top 2.5em
+    top 0
     right 0
-    padding: 0.333em 0.75em
+    padding 0.333em 0.75em
+    text-align center
+  span
+    display block
+  .dos
+    color #c1afab
+    font-style italic
+    position absolute
+    top -1.1333em
+    left 50%
+    margin-left -2.333em
 
 /* header }}} */
 /* {{{ footer */
@@ -356,7 +367,7 @@ body
   width 66%
 #footer
   margin-left 8%
-  width 27%
+  width 26%
 
 .vcard
   margin-top 0.16666em
@@ -431,9 +442,25 @@ a.entry-title
     font-family 'Lucida Grande'
     font-size 0.75em
     margin-top 0.333em
+    &:before
+      content 'Posted in '
+      font-size 0.666em
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHpSURBVDjLhZNbbxJhEIb3T/RWw78g2fjLvLE2ppe1TYNtvGuNRo6BcA4kIBBOgXCU3QXploCAmNQE/VY55PWbj7CWcPBibuab95l3ZmelZrOJRqOBWq2GarWKSqWCcrmMUqmEYrF4BEA6FFK9XsdyudyKfr8vILlc7iBEos4k6PV6orOu6yaEctwF0un0XohElqmYulGiUCiUptMp5vO5yBMwm80ikUjshEjUdV3IxX+45Z5hGPj29RcykbF463a7SKVSiMfjWxCJOq8tLxYLkPj72MCbEw3nz1WkwytIp9MhF4hEIhsQic/IJpOJKJrNZqKz7aWGm7Mu3l/quDppmxBN08gFAoGACZHy+fwzPiMbj1dFSvVBdL49v8PHq/stiKqq5AJer1dABCWTych8RjYajURRu/EDtmMV7y7+QWzHGj4FV++tVotcwO12H5mzJJNJmc/IhsPhFuSDTcfb0w6uTz/zr7MQLkKhEJxO59ONjfL55FgsxgaDgQm5fKHg+lUbtxdt/Jwaj8UWc4THEY1G5XA4zOgSxeLqD7h5/QW/jbkpdjgcFnOJu44jGAzKfr+f0SWuPzGJeX5DvBdA4fP5rHzTjA5MUZSd4oMACo/HY3W5XIzEdrvdsvOU//e78q5WLn6y7/0viZYv/mL7AwwAAAAASUVORK5CYII%3D') no-repeat
+      display inline-block
+      padding-left 1.75em
+      height 1.5em
+      width 5em
 a[rel='tag']
+  color SECONDARY
+  font-size 0.75em
+  font-style normal
   text-decoration none
- 
+  &:focus,
+  &:hover
+    color TERTIARY
+  &:active
+    color darken(TERTIARY, 50%)
+
 .entry-summary,
 .entry-content
   BODY_COPY()
@@ -444,6 +471,41 @@ a[rel='tag']
   p + p
     text-indent 1.8em
 
+.related
+  border-top 2px solid SECONDARY
+  margin 1.5em 0
+  &:before
+    content ' '
+    display block
+    margin-top 1px
+    padding-bottom 1.5em
+    border-top 1px solid SECONDARY
+
+  header,
+  ul
+    width 50%
+    display inline-block
+    vertical-align top
+  header
+    font-size 1em
+    font-weight bold
+  ul
+    list-style none
+    margin 0
+    padding 0
+  a
+    BODY_COPY()
+    color SECONDARY
+    text-decoration none
+    &:focus,
+    &:hover
+      color TERTIARY
+  span
+    color darken(LIGHT, 20%)
+    display block
+    font-size 0.75em
+
+
 
 /* article }}} */
 /* {{{ 35em min-width */
@@ -451,6 +513,28 @@ a[rel='tag']
   // nothing here
 
 /* end 35em min-width }}} */
+/* {{{ 60em min-width tablet-esque */
+@media only screen and (max-width: 60em)
+  .content,
+  #footer
+    width 100%
+    margin 0
+/* end 60em min-width tablet-esque }}} */
+/* {{{ XXem min-width */
+@media only screen and (max-width: 60em)
+  body
+    padding 1.5em 0
+  #masthead
+    a
+      margin-bottom 0
+    p
+      display block
+      margin-bottom 2em
+      position relative
+  .hentry
+    margin-bottom 3em
+/* end XXem min-width }}} */
+
 /* {{{ high-res mq */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5)only screen and (min-resolution: 144dpi)
