@@ -1,5 +1,6 @@
 ---
 ---
+@import 'nib'
 /*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* {{{ normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
@@ -309,7 +310,6 @@ DISPLAY_COPY()
 html
   //background: #dcd2d0
   padding 0 5%
-  border-top 6px solid PRIMARY
 
 body
   max-width 1024px
@@ -321,7 +321,16 @@ body
   //border: 4px solid #af7260
   //border-top: 0
   //border-bottom: 0
-
+  &:before
+    border-top 6px solid PRIMARY
+    position fixed
+    content ' '
+    top 0
+    left 0
+    right 0
+    height 10px
+    background linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0))
+    z-index 10
 
 /* main styles }}} */
 /*{{{ header */
