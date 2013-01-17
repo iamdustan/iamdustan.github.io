@@ -4,18 +4,20 @@ title: 2012 Reading List
 tags:
 - reading list
 summary: In 2012, my voracious appetite for reading and learning had
-reached new heights. Without setting any direct goals for reading, I
-just began consuming and consuming but just started 
+  reached new heights. Without setting any direct goals for reading, I
+  began the year consuming book upon book upon book and kept a running
+  record of what I had read so at year&rsquo;s end I could look back on
+  it all and see what I had discovered.
 ---
 
 
-<table>
+<table class="numbered">
   <thead>
     <tr>
-      <th scope="col">Number</td>
-      <th scope="col">Book</td>
-      <th scope="col">Author</td>
-      <th scope="col">Finished Date</td>
+      <th scope="col"><span class="visuallyhidden">Number</span></th>
+      <th scope="col">Book</th>
+      <th scope="col">Author</th>
+      <th scope="col" style="width:7em">Finished Date</th>
     </tr>
   </thead>
   <tbody>

@@ -2,7 +2,7 @@
 ---
 @import 'nib'
 /*! normalize.css v1.0.1 | MIT License | git.io/normalize */
-/* {{{ normalize */
+/* @group normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
   display: block
 
@@ -189,8 +189,8 @@ table
   border-collapse: collapse
   border-spacing: 0
 
-/* end normalize }}} */
-/* {{{ h5bp helpers */
+/* end normalize @end */
+/* @group h5bp helpers */
 
 html, button, input, select, textarea
   color: #222
@@ -279,8 +279,8 @@ textarea
 .clearfix
   *zoom: 1
 
-/* h5bp helpers }}} */
-/* {{{ colors */
+/* h5bp helpers @end */
+/* @group colors */
 
 /*
 #DCD2D0 White Tiger
@@ -304,8 +304,8 @@ DISPLAY_COPY()
   font-weight 400
   font-variant small-caps
 
-/* end colors }}} */
-/* {{{ main styles */
+/* end colors @end */
+/* @group main styles */
 
 html
   //background: #dcd2d0
@@ -335,8 +335,8 @@ body
 .content
   position relative
 
-/* main styles }}} */
-/*{{{ header */
+/* main styles @end */
+/*@group header */
 
 #masthead
   position relative
@@ -369,8 +369,8 @@ body
     left 50%
     margin-left -2.333em
 
-/* header }}} */
-/* {{{ footer */
+/* header @end */
+/* @group footer */
 .content,
 #footer
   display inline-block
@@ -409,8 +409,8 @@ body
     &:hover
       color darken(LIGHT, 40%)
 
-/* footer }}} */
-/* {{{ article */
+/* footer @end */
+/* @group article */
 
 #home h1
   display none
@@ -519,20 +519,34 @@ a[rel='tag']
 
 
 
-/* article }}} */
-/* {{{ 35em min-width */
+/* article @end */
+/* @group tables */
+
+th
+  text-align left
+  border-bottom 1px solid #ccc
+td
+  border-bottom 1px solid #ddd
+
+.numbered
+  td:first-child
+    text-align center
+    width 2em
+
+/* @end tables */
+/* @group 35em min-width */
 @media only screen and (min-width: 35em)
   // nothing here
 
-/* end 35em min-width }}} */
-/* {{{ 60em min-width tablet-esque */
+/* end 35em min-width @end */
+/* @group 60em min-width tablet-esque */
 @media only screen and (max-width: 60em)
   .content,
   #footer
     width 100%
     margin 0
-/* end 60em min-width tablet-esque }}} */
-/* {{{ XXem min-width */
+/* end 60em min-width tablet-esque @end */
+/* @group XXem min-width */
 @media only screen and (max-width: 60em)
   body
     padding 1.5em 0
@@ -545,15 +559,15 @@ a[rel='tag']
       position relative
   .hentry
     margin-bottom 3em
-/* end XXem min-width }}} */
+/* end XXem min-width @end */
 
-/* {{{ high-res mq */
+/* @group high-res mq */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5)only screen and (min-resolution: 144dpi)
   // nothing here
 
-/* high-res mq }}} */
-/* {{{ print */
+/* high-res mq @end */
+/* @group print */
 
 @media print
   *
@@ -597,5 +611,6 @@ a[rel='tag']
   h2, h3
     page-break-after: avoid
 
-/* print }}} */
+/* print @end */
 
+/* vi: set foldmarker=@group,@end */
