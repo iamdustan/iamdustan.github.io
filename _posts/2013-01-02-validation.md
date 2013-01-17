@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Validation
+published: false
 tags:
 - life
 summary: 
