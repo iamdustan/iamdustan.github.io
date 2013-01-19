@@ -1,5 +1,5 @@
 require 'shellwords'
- 
+
 module Jekyll
   class StylusConverter < Converter
     safe true

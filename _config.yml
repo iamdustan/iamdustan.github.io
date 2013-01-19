@@ -1,7 +1,4 @@
 #markdown: rdiscount
 permalink: pretty
 pygments: true
-stylus:
-  compress: true
-  path: ./assets/
 
