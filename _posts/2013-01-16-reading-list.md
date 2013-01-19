@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2012 Reading List
+title: Books of 2012
 tags:
 - reading list
 summary: In 2012, my voracious appetite for reading and learning had
@@ -10,6 +10,11 @@ summary: In 2012, my voracious appetite for reading and learning had
   it all and see what I had discovered.
 ---
 
+2012 was a breakout year for my love of books and reading. I
+inadvertently almost averaged a book a week and ended the year with 42.
+I guess that means this past year I discovered the meaning of life.
+
+For posterity, here is the list:
 
 <table class="numbered">
   <thead>
@@ -173,7 +178,7 @@ summary: In 2012, my voracious appetite for reading and learning had
     </tr> 
     <tr>
       <td>26</td>
-      <td>Freedom, Money, Time and teh Key to Creative Success</td>
+      <td>Freedom, Money, Time and the Key to Creative Success</td>
       <td>Mark McGuiness</td>
       <td>June 16</td>
     </tr> 
@@ -233,7 +238,7 @@ summary: In 2012, my voracious appetite for reading and learning had
     </tr> 
     <tr>
       <td>36</td>
-      <td>Next Chrsitians</td>
+      <td>Next Christians</td>
       <td>Gabe Lyons</td>
       <td>August 9</td>
     </tr> 
@@ -276,3 +281,28 @@ of Reality</td>
     </tr>
   </tbody>
 </table>
+
+I find it interesting to review what I gravitate towards after the fact
+to discover where my interests lie. Standout books for this year that I
+have added to my recommended reading list are as follows:
+
+<h2 class="visuallyhidden">Favorite Books of 2012</h2>
+
+### The Ender&rsquo;s Game series by Orson Scott Card.
+
+<p class="visuallyhidden">I am a big fan of the science fiction variety. The world and characters
+Orson Scott Card created in the Enderverse will stay with me for a long
+time to come.</p>
+
+### Rock, Paper, Scissors by Len Fisher
+
+### Happiest Baby on the Block by Harvey Karp
+
+### In a Pit with a Lion on a Snowy Day by Mark Patterson
+
+### The Starfish and the Spider by Ori Brafman and Rod Beckstrom
+
+### The Optimism Bias by Tali Sharot
+
+
+
