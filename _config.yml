@@ -1,4 +1,12 @@
 #markdown: rdiscount
 permalink: pretty
 pygments: true
+include:
+  - assets/
+  - index.html
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - bin/
 

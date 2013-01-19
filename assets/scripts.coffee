@@ -1,9 +1,8 @@
 ---
 ---
-
 (($) ->
 
-  $(document).on 'click' 'a' handleClick
+  $(document).on 'click', 'a', handleClick
 
   handleClick = (event) ->
     link = event.currentTarget
@@ -29,11 +28,11 @@
         .animate({
           opacity: 1
           left: 0
-        }, 700
+        }, 700)
 
-        $('body').animate { scrollTop: 0 }, 700, 'easeInOutCubic'
-        $content.animate { opacity: 0, left: '-200%' }, 700, () ->
-          animationComplete = true
+      $('body').animate { scrollTop: 0 }, 700, 'easeInOutCubic'
+      $content.animate { opacity: 0, left: '-200%' }, 700, () ->
+        animationComplete = true
 
   replaceState = (url, title) ->
     window.history.replaceState {}, title, url
@@ -41,11 +40,10 @@
   pushState = (url, title) ->
     window.history.pushState {}, title, url
 
-  $(window).bind 'popstate' onPopstate
+  $(window).bind 'popstate', onPopstate
 
   onPopstate = (event) ->
-    console.log 'onPopstate', arguments
-
+    console.log 'onPopstate', event
 
   $.easing['easeInOutCubic'] = (x, t, b, c, d) ->
     return c/2*t*t*t +b if (t /= d/2) < 1
