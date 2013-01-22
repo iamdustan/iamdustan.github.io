@@ -298,7 +298,7 @@ time to come.</p>
 
 ### Happiest Baby on the Block by Harvey Karp
 
-### In a Pit with a Lion on a Snowy Day by Mark Patterson
+### In a Pit with a Lion on a Snowy Day by Mark Batterson
 
 ### The Starfish and the Spider by Ori Brafman and Rod Beckstrom
 
