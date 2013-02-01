@@ -2,6 +2,31 @@
 ---
 
 @import 'nib'
+/* @group colors */
+
+/*
+#DCD2D0 White Tiger
+#5A5484 Penelope (purple)
+#292536 Walk on By (darker purple)
+#623842 Beginning of the End (Purple+orange?)
+#AF7260 B12 (Orangish)
+*/
+PRIMARY_DARK = #292536
+PRIMARY = #5A5484
+SECONDARY = #623842
+TERTIARY = #AF7260
+LIGHT = #DCD2D0
+
+BODY_COPY()
+  font-family 'Radley', serif
+  font-weight 400
+
+DISPLAY_COPY()
+  font-family 'Radley', serif
+  font-weight 400
+  font-variant small-caps
+
+/* end colors @end */
 /*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* @group normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
@@ -35,8 +60,9 @@ a:focus
 
 a:active, a:hover
   outline: 0
- 
-h1, h2
+
+h1, h2, h3
+  color SECONDARY
   font-family: Helvetica
   font-weight: bold
 
@@ -285,31 +311,6 @@ textarea
   *zoom: 1
 
 /* h5bp helpers @end */
-/* @group colors */
-
-/*
-#DCD2D0 White Tiger
-#5A5484 Penelope (purple)
-#292536 Walk on By (darker purple)
-#623842 Beginning of the End (Purple+orange?)
-#AF7260 B12 (Orangish)
-*/
-PRIMARY_DARK = #292536
-PRIMARY = #5A5484
-SECONDARY = #623842
-TERTIARY = #AF7260
-LIGHT = #DCD2D0
-
-BODY_COPY()
-  font-family 'Radley', serif
-  font-weight 400
-
-DISPLAY_COPY()
-  font-family 'Radley', serif
-  font-weight 400
-  font-variant small-caps
-
-/* end colors @end */
 /* @group main styles */
 
 html
@@ -339,6 +340,17 @@ body
 
 .content
   position relative
+
+  a
+    color darken(TERTIARY, 10%)
+    display inline-block
+    padding 0.333em 0.5em
+    margin: -0.333em -0.5em
+    text-decoration none
+    transition all 0.2s ease-in
+    &:focus,
+    &:hover
+      color brighten(TERTIARY, 30%)
 
 /* main styles @end */
 /*@group header */
@@ -376,11 +388,13 @@ body
 
 /* header @end */
 /* @group footer */
-.content,
+.pants,
 #footer
   display inline-block
   vertical-align top
-.content
+
+.pants
+  overflow-x hidden
   width 66%
 #footer
   margin-left 8%
@@ -549,7 +563,7 @@ td
 /* end 35em min-width @end */
 /* @group 60em min-width tablet-esque */
 @media only screen and (max-width: 60em)
-  .content,
+  .pants,
   #footer
     width 100%
     margin 0
@@ -622,3 +636,4 @@ td
 /* print @end */
 
 /* vi: set foldmarker=@group,@end */
+

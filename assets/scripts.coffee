@@ -2,7 +2,6 @@
 ---
 (($) ->
 
-
   handleClick = (event) ->
     link = event.currentTarget
     # Middle click, cmd click, and ctrl click should open links in a new tab as normal
@@ -17,15 +16,16 @@
 
     # else let's make it fancy
     event.preventDefault()
-    fadeTo link.href
+    fadeTo link.href, link.innerText
 
-  fadeTo = (url) ->
+  fadeTo = (url, title) ->
     $content = $ '.content'
     animationComplete = false
     handleLoaded = (thing) ->
       return setTimeout(handleLoaded, 10) unless animationComplete
 
-      pushState url, 'Title'
+      console.log thing
+      pushState url, title
       $content
         .css('left', '200%')
         .animate({
@@ -33,16 +33,18 @@
           left: 0
         }, 700)
 
-    $content.load url + ' .hentry', handleLoaded
+    $content.load url + ' .content', handleLoaded
     $('body').animate { scrollTop: 0 }, 700, 'easeInOutCubic'
     $content.animate { opacity: 0, left: '-200%' }, 700, () ->
       animationComplete = true
 
 
   replaceState = (url, title) ->
+    document.title = title
     window.history.replaceState {}, title, url
 
   pushState = (url, title) ->
+    document.title = title
     window.history.pushState {}, title, url
 
 
