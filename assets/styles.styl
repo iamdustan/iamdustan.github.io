@@ -318,7 +318,7 @@ html
   padding 0 5%
 
 body
-  max-width 1024px
+  max-width 660px
   margin 0 auto
   padding 1.5em 3em
   position relative
@@ -388,6 +388,7 @@ body
 
 /* header @end */
 /* @group footer */
+/*
 .pants,
 #footer
   display inline-block
@@ -399,6 +400,11 @@ body
 #footer
   margin-left 8%
   width 26%
+*/
+
+.pants
+  margin-bottom 3em
+  overflow-x hidden
 
 .vcard
   margin-top 0.16666em
@@ -453,10 +459,12 @@ a.entry-title
   &:hover
     color TERTIARY
 
+.hentry .meta
+  margin 0 0 0.75em
+
 .meta
   BODY_COPY()
   font-size 1.333em
-  margin 0.75em 0
   .published,
   .updated
     color TERTIARY
