@@ -24,7 +24,6 @@
     handleLoaded = (thing) ->
       return setTimeout(handleLoaded, 10) unless animationComplete
 
-      console.log thing
       pushState url, title
       $content
         .css('left', '200%')
@@ -46,6 +45,7 @@
   pushState = (url, title) ->
     document.title = title
     window.history.pushState {}, title, url
+    _gaq.push ['_trackPageview', url]
 
 
   onPopstate = (event) ->
