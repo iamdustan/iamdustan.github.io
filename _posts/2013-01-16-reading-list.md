@@ -3,18 +3,19 @@ layout: post
 title: Books of 2012
 tags:
 - reading list
-summary: In 2012, my voracious appetite for reading and learning had
-  reached new heights. Without setting any direct goals for reading, I
-  began the year consuming book upon book upon book and kept a running
-  record of what I had read so at year&rsquo;s end I could look back on
-  it all and see what I had discovered.
+summary:
 ---
 
-2012 was a breakout year for my love of books and reading. I
-inadvertently almost averaged a book a week and ended the year with 42.
-I guess that means this past year I discovered the meaning of life.
+In 2012, my voracious appetite for reading and learning had
+reached new heights. Without setting any direct goals for reading, I
+began the year consuming book upon book upon book and kept a running
+record of what I had read so at year&rsquo;s end I could look back on
+it all and see what I had discovered.
 
-For posterity, here is the list:
+I inadvertently almost averaged a book a week and ended the year with 42.
+According to Siri, I have discovered the meaning of life.
+
+## The List
 
 <table class="numbered">
   <thead>
