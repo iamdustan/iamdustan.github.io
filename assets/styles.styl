@@ -477,7 +477,6 @@ a.entry-title
   padding 0.333em 1.5em
   */
   .entry-tags
-    float right
     font-family 'Lucida Grande'
     font-size 0.75em
     margin-top 0.333em
@@ -572,7 +571,8 @@ td
 /* @end tables */
 /* @group 35em min-width */
 @media only screen and (min-width: 35em)
-  // nothing here
+  .entry-tags
+    float right
 
 /* end 35em min-width @end */
 /* @group 60em min-width tablet-esque */
@@ -586,8 +586,10 @@ td
 @media only screen and (max-width: 60em)
   body
     padding 1.5em 0
+    font-size 1em
   #masthead
     a
+      font-size: 2.5em
       margin-bottom 0
     p
       display block
@@ -595,6 +597,22 @@ td
       position relative
   .hentry
     margin-bottom 3em
+
+  .meta .published,
+  .meta .updated
+    font-size: 0.75em
+  .entry-tags
+    display block
+
+  blockquote
+    font-size 0.8em
+
+  h1, h2, h3, h4,
+  .entry-title
+    line-height 1.1
+
+  .entry-content
+    font-size: 1.3333em
 /* end XXem min-width @end */
 
 /* @group high-res mq */
