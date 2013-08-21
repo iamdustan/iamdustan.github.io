@@ -1,3 +1,5 @@
-serve:
-	jekyll --auto --server
+
+serve: server
+server:
+	jekyll server --watch
 
