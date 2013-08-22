@@ -15,8 +15,7 @@ scrolling](http://dev.w3.org/csswg/cssom-view/#scroll-an-element-into-view) on b
 In the future you&rsquo;ll be able to declare smooth scrolling in your
 css with `body { scroll-behavior: smooth }` or programmatically by using
 `window.scrollTo(x, y, 'smooth');` or
-`document.getElementById('offscreenElement').scrollIntoView(true,
-'smooth')`.
+`document.getElementById('offscreenElement').scrollIntoView(true, 'smooth')`.
 
 Yet another fine example of browsers standardizing a behavior developers
 have been using for years.
