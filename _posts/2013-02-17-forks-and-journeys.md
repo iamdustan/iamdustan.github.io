@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Forks and Journeys.
-published: true
 tags:
 - thoughts
 - creation
