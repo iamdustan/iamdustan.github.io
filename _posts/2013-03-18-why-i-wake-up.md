@@ -16,7 +16,7 @@ Quite simple.
 * I help companies improve their products through a better user experience.
 * I help humans by assisting companies in scaling their technology product
 to the point of creating new jobs.
-* I help humans by educating web my fellow developers to do the same.
+* I help humans by educating my fellow web developers to do the same.
 
 What I do matters. What you do matters, too.
 

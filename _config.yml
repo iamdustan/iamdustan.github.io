@@ -3,11 +3,12 @@ permalink: pretty
 pygments: true
 port: 5000
 include:
-  - assets/
+  - ./assets/
   - index.html
 exclude:
   - Gemfile
   - Gemfile.lock
   - Makefile
   - bin/
+  - node_modules
 

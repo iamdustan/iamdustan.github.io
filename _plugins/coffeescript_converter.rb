@@ -17,7 +17,7 @@ module Jekyll
       begin
         CoffeeScript.compile content
       rescue => e
-        puts "CoffeeScript erorr: #{ e.messge }"
+        puts "CoffeeScript error: #{ e.message }"
       end
     end
   end
