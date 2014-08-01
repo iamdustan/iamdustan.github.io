@@ -3,11 +3,7 @@ layout: post
 title: Flexbox your buttons.
 tags:
 - css3 flexbox
-summary: In 2012, my voracious appetite for reading and learning had
-  reached new heights. Without setting any direct goals for reading, I
-  began the year consuming book upon book upon book and kept a running
-  record of what I had read so at year&rsquo;s end I could look back on
-  it all and see what I had discovered.
+summary:
 ---
 
 There are certain properties that are not consistently applied across
