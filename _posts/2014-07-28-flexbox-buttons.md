@@ -66,7 +66,7 @@ happened that certain versions of Blink and Webkit allow `display: flex` on
 `button`’s where as Gecko and other versions of Webkit do not. I am unsure what
 Trident thinks of this.
 
-(See [@dholbert](https://twitter.com/CodingExon) resopnse to this issue on
+(See [@dholbert](https://twitter.com/CodingExon) response to this issue on
 [Bugzilla #984869](https://bugzilla.mozilla.org/show_bug.cgi?id=984869#c2))
 
 # TLDR
