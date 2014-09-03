@@ -37,19 +37,20 @@
     $content.animate { opacity: 0, left: '-200%' }, 700, () ->
       animationComplete = true
 
-
   replaceState = (url, title) ->
-    document.title = title
-    window.history.replaceState {}, title, url
+    if title
+      document.title = title
+    window.history.replaceState {title: title}, null, url
 
   pushState = (url, title) ->
     document.title = title
-    window.history.pushState {}, title, url
+    window.history.pushState {title: title}, null, url
     ga 'send', 'pageview'
 
 
   onPopstate = (event) ->
-    console.log 'onPopstate', event
+    if event.originalEvent.state
+      document.title = event.originalEvent.state.title
 
   $.easing['easeInOutCubic'] = (x, t, b, c, d) ->
     return c/2*t*t*t + b if (t /= d/2) < 1
