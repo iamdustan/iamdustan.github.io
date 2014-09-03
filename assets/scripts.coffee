@@ -45,7 +45,7 @@
   pushState = (url, title) ->
     document.title = title
     window.history.pushState {}, title, url
-    _gaq.push ['_trackPageview', url]
+    ga 'send', 'pageview'
 
 
   onPopstate = (event) ->
