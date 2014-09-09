@@ -1,14 +1,14 @@
 ---
-layout: nil
+layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Dustan Kasten</title>
- <link href="http://dustankasten.com/atom.xml" rel="self"/>
- <link href="http://dustankasten.com/"/>
+ <link href="http://iamdustan.com/atom.xml" rel="self"/>
+ <link href="http://iamdustan.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://dustankasten.com/</id>
+ <id>http://iamdustan.com/</id>
  <author>
    <name>Dustan Kasten</name>
    <email>dustan.kasten@gmail.com</email>
@@ -17,9 +17,9 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://dustankasten.com{{ post.url }}"/>
+   <link href="http://iamdustan.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://dustankasten.com{{ post.id }}</id>
+   <id>http://iamdustan.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

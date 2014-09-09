@@ -1,6 +1,6 @@
 #markdown: rdiscount
 permalink: pretty
-pygments: true
+hilighter: pygments
 port: 5000
 include:
   - ./assets/
