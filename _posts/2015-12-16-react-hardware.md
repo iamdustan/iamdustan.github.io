@@ -29,53 +29,53 @@ sounded quite appealing for hardware. What if one could merely say what the
 physical hardware should look like and let React make it so? What if this was
 able to create a blinking LED?
 
-```
-/*
-  Blink
-  Turns on an LED on for one second, then off for one second, repeatedly.
- */
-var React = require('react-hardware');
-var {Board, Led} = React;
+{% highlight js %}
+  /*
+    Blink
+    Turns on an LED on for one second, then off for one second, repeatedly.
+  */
+  var React = require('react-hardware');
+  var {Board, Led} = React;
 
-var Program = React.createClass({
-  getInitialState() {
-    // 0-255
-    return {value: 0};
-  },
+  var Program = React.createClass({
+    getInitialState() {
+      // 0-255
+      return {value: 0};
+    },
 
-  componentWillMount() {
-    this._interval = null;
-  },
+    componentWillMount() {
+      this._interval = null;
+    },
 
-  componentDidMount() {
-    this._interval = setInterval(() => {
-      var value = this.state.value === 255 ? 0 : 255;
-      this.setState({value})
-    }, 1000);
-  },
+    componentDidMount() {
+      this._interval = setInterval(() => {
+        var value = this.state.value === 255 ? 0 : 255;
+        this.setState({value})
+      }, 1000);
+    },
 
-  componentWillUnmount() {
-    clearInterval(this._interval);
-  },
+    componentWillUnmount() {
+      clearInterval(this._interval);
+    },
 
-  render() {
-    return (
-      <Board>
-        <Led pin={13} value={this.state.value}
-      </Board>
-    )
-  }
-});
+    render() {
+      return (
+        <Board>
+          <Led pin={13} value={this.state.value}
+        </Board>
+      )
+    }
+  });
 
-React.render(<Program />, '/dev/cu.usbmodem1411');
-```
+  React.render(<Program />, '/dev/cu.usbmodem1411');
+{% endhighlight %}
 
 Now what if you want a second flashing LED to compose together with the first?
 Extracting the concept of an interface component into its own isolated world
 with clear compositional boundaries—like this flashing LED—is a place where
 React shines.
 
-```
+{% highlight js %}
 var React = require('react-hardware');
 var {Board, Led} = ReactArduino;
 
@@ -122,7 +122,7 @@ var Program = React.createClass({
 });
 
 React.render(<Program />, '/dev/cu.usbmodem1411');
-```
+{% endhighlight %}
 
 ## The Future of Hardware
 
