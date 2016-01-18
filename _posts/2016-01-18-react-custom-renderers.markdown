@@ -6,7 +6,7 @@ tags:
 summary:
 ---
 
-You’re considering building a custom renderer for React and are wondering where to start and what to do? Welcome (to the land of dragons)! Just kidding, it’s not that bad—just undocumented and not officially supported.
+You’re considering building a custom renderer for React and are wondering where to start and what to do? Welcome (to the land of dragons)! Just kidding, it’s not that bad—just undocumented and not officially supported. ¯\\_(ツ)\_/¯
 
 This article is intended to be a high level view of the developer experience a renderer should aim to provide based on my experience with React, writing a renderer, and exploring other custom renderers. Note that this is *not* a guide on how to write a renderer.
 
