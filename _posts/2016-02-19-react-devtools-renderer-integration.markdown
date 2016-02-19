@@ -67,9 +67,9 @@ Nuclide has first-class support for React Native.
   <figcaption>React Hardware and Nuclide DevTools</figcaption>
 </figure>
 
-Another FB engineer mentioned that it should *just work* for any other renderer.
-I had the DevTools and React Hardware definitely connecting in some capacity,
-but nothing was working.
+[@alex_frantic](https://twitter.com/alex_frantic) mentioned that it should *just
+work* for any other renderer. I had the DevTools and React Hardware definitely
+connecting in some capacity, but nothing was working.
 
 I spent a couple nights adding logs to [React core](https://twitter.com/dan_abramov/status/700658352850743296),
 the DevTools codebase, and React Hardware to get a sense for what was happening
