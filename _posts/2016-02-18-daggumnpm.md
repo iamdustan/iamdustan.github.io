@@ -17,5 +17,15 @@ fresh, let you know when it’s done, and automatically run the previous command
 alias daggumnpm='rm -rf node_modules && npm i && say "Rerunning `!!` && !!'
 {% endhighlight %}
 
-* `!!`: execute the previous command. [https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps#executing-commands-from-your-bash-history](https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps#executing-commands-from-your-bash-history)
+
+If you’ve used node at all the first two commands should be straightforward.
+
+
+* `rm`: remove things. `-rf` means recursively destroy a directory.
+* `npm i`: alias for `npm install`
+* `say "Rerunning \`!!\`": use your computers robot voice to audibly say Running
+  whatever that double exclamation point is.
+* `!!`: This is the fun one. Execute the previous command. [https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps#executing-commands-from-your-bash-history](https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps#executing-commands-from-your-bash-history)
+  For example, you ran `npm start` and it failed with some dependency issue.
+  `daggumnpm` will do a clean npm install and rerun `npm start` for you.
 
