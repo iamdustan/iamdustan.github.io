@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title></title><link rel="shortcut icon"/><link href="//fonts.googleapis.com/css?family=Lato:100,400,700,900" rel="stylesheet" type="text/css"/><style id="typography.js">/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+html {
+  box-sizing: border-box;
+  font-size: 125%;
+  line-height: 1.5em;
+  overflow-y: scroll;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: hsl(0,0%,20%);
+  font-family: Lora;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* Make image responsive by default */
+img {
+  max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dl,dd,p,figure,pre,table,fieldset,blockquote,form,noscript,iframe,img,hr {
+margin: 0;
+margin-bottom: 1.5rem;
+padding: 0;
+}
+
+blockquote {
+margin: 1.5rem 3.75rem;
+}
+
+b,strong {
+font-weight: 700
+}
+
+hr {
+background: hsl(0,0%,80%);
+border: none;
+height: 1px;
+margin-bottom: calc(1.5rem - 1px);
+}
+
+ol,ul {
+list-style-position: outside;
+margin-left: 1.5rem;
+}
+
+ul li,ol li {
+padding-left: 0;
+}
+
+code,kbd,pre,samp {
+font-size: 0.85rem;
+line-height: 1.5rem;
+}
+
+table {
+font-size: 1rem;
+line-height: 2.25rem;
+width: 100%;
+}
+
+thead {
+text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+color: hsl(0,0%,25%);
+font-family: Open Sans;
+font-weight: 900;
+}
+
+h1 {
+font-size: 4.23607rem;
+line-height: 4.5rem;
+}
+
+h2 {
+font-size: 2.61803rem;
+line-height: 3rem;
+}
+
+h3 {
+font-size: 1.61803rem;
+line-height: 2.25rem;
+}
+
+h4 {
+font-size: 1.37824rem;
+line-height: 2.25rem;
+}
+
+h5 {
+font-size: 1.17398rem;
+line-height: 1.5rem;
+}
+
+h6 {
+font-size: 1rem;
+line-height: 1.5rem;
+}
+
+
+</style><link rel="stylesheet" href="/styles.css"/></head><body class="landing-page"><div id="react-mount"><div style="max-width:36rem;margin-left:auto;margin-right:auto;padding:3rem 0.75rem;" data-reactid=".1kjblk8peyo" data-react-checksum="-916042298"><h3 data-reactid=".1kjblk8peyo.0:0"><a style="text-decoration:none;color:inherit;" class="" href="/" data-reactid=".1kjblk8peyo.0:0.0">iamdustan.com</a></h3><div class="markdown" data-reactid=".1kjblk8peyo.0:1"><h1 data-reactid=".1kjblk8peyo.0:1.0">React Hardware</h1><em style="display:block;margin-bottom:3rem;" data-reactid=".1kjblk8peyo.0:1.1"><span data-reactid=".1kjblk8peyo.0:1.1.0">Posted </span><span data-reactid=".1kjblk8peyo.0:1.1.1">March 1, 2016</span></em><div data-reactid=".1kjblk8peyo.0:1.2"><p>React is proving that its component-driven architecture and abstractions hold up
+beyond browser-based user interfaces. React Native is bringing React’s authoring
+and architectural style to iOS and Android. <a href="https://github.com/Yomguithereala">Guillaume Plique</a>
+has written a <a href="https://github.com/Yomguithereal/react-blessed">react-blessed</a>
+renderer for terminal-based UIs. Netflix has written React bindings for their
+proprietary Gibbon rendering engine (<a href="https://www.youtube.com/watch?v=eNC0mRYGWgc">React Conf 2015 talk</a>).
+I’ve been writing a renderer for the Firmata protocol so that you can manipulate
+the real world with React.</p>
+<p>Firmata is a standard protocol based on the midi message format for
+communicating with microcontrollers from software running on a computer. There
+are Firmata client bindings available in many languages: <a href="https://www.youtube.com/watch?v=eNC0mRYGWgc">https://github.com/firmata/protocol#firmata-client-libraries</a></p>
+<h2>Declarative Hardware</h2>
+<p>I’ve had an arduino sitting on my desk at home for the past 3 years. One of the
+stumbling blocks to programming it was that I didn’t have a clear picture of how
+to manage state on it. After using React for a few months, the idea that your
+interface is the <a href="https://speakerdeck.com/jmorrell/jsconf-uy-flux-those-who-forget-the-past-dot-dot-dot-1?slide=4">function of state and props</a>
+sounded quite appealing for hardware. What if one could merely say what the
+physical hardware should look like and let React make it so? What if this was
+able to create a blinking LED?</p>
+<pre><code class="language-jsx">  <span class="hljs-comment">/*
+    Blink
+    Turns on an LED on for one second, then off for one second, repeatedly.
+  */</span>
+  <span class="hljs-keyword">var</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-hardware'</span>);
+  <span class="hljs-keyword">var</span> {Board, Led} = React;
+
+  <span class="hljs-keyword">var</span> Program = React.createClass({
+    getInitialState() {
+      <span class="hljs-comment">// 0-255</span>
+      <span class="hljs-keyword">return</span> {value: <span class="hljs-number">0</span>};
+    },
+
+    componentWillMount() {
+      <span class="hljs-keyword">this</span>._interval = <span class="hljs-literal">null</span>;
+    },
+
+    componentDidMount() {
+      <span class="hljs-keyword">this</span>._interval = setInterval(() =&gt; {
+        <span class="hljs-keyword">var</span> value = <span class="hljs-keyword">this</span>.state.value === <span class="hljs-number">255</span> ? <span class="hljs-number">0</span> : <span class="hljs-number">255</span>;
+        <span class="hljs-keyword">this</span>.setState({value})
+      }, <span class="hljs-number">1000</span>);
+    },
+
+    componentWillUnmount() {
+      clearInterval(<span class="hljs-keyword">this</span>._interval);
+    },
+
+    render() {
+      <span class="hljs-keyword">return</span> (
+        &lt;Board&gt;
+          &lt;Led pin={13} value={this.state.value}
+        &lt;/Board&gt;
+      )
+    }
+  });
+
+  React.render(&lt;Program /&gt;, '/dev/cu.usbmodem1411');
+</code></pre>
+<p>Now what if you want a second flashing LED to compose together with the first?
+Extracting the concept of an interface component into its own isolated world
+with clear compositional boundaries—like this flashing LED—is a place where
+React shines.</p>
+<pre><code class="language-jsx"><span class="hljs-keyword">var</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-hardware'</span>);
+<span class="hljs-keyword">var</span> {Board, Led} = ReactArduino;
+
+<span class="hljs-keyword">var</span> FlashingLed = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {value: <span class="hljs-keyword">this</span>.propsstate.initialValue || <span class="hljs-number">0</span>};
+  },
+
+  getDefaultProps() {
+    <span class="hljs-keyword">return</span> {interval: <span class="hljs-number">1000</span>, delay: <span class="hljs-number">0</span>};
+  },
+
+  componentWillMount() {
+    <span class="hljs-keyword">this</span>._interval = <span class="hljs-literal">null</span>;
+  },
+
+  componentDidMount() {
+    <span class="hljs-keyword">var</span> start = () =&gt; {
+      <span class="hljs-keyword">this</span>._interval = setInterval(() =&gt; {
+          <span class="hljs-keyword">var</span> value = <span class="hljs-keyword">this</span>.state.value === <span class="hljs-number">255</span> ? <span class="hljs-number">0</span> : <span class="hljs-number">255</span>;
+          <span class="hljs-keyword">this</span>.setState({value});
+        },
+        <span class="hljs-keyword">this</span>.props.interval
+      );
+    };
+
+    setInterval(start, <span class="hljs-keyword">this</span>.props.delay);
+  },
+
+  componentWillUnmount() {
+    clearInterval(<span class="hljs-keyword">this</span>._interval);
+  },
+});
+
+<span class="hljs-keyword">var</span> Program = React.createClass({
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;Board&gt;
+        &lt;FlashingLed pin={13} interval={1000} /&gt;
+        &lt;FlashingLed pin={14} interval={1000} delay={500} /&gt;
+      &lt;/Board&gt;
+    )
+  }
+});
+
+React.render(&lt;Program /&gt;, '/dev/cu.usbmodem1411');
+</code></pre>
+<h2>The Future of Hardware</h2>
+<p>This would not be possible without the amazing work of the React team and the
+nodebots community: Rick Waldron and the <a href="http://johnny-five.io/">Johnny-Five</a>
+contributors, the <a href="http://cylonjs.com/documentation/getting-started/">Cylon.js</a>
+team, Julian Gautier for the Firmata bindings, and Chris Williams have all
+created amazing things that make this possible.</p>
+<p>Now imagine what will happen when we bring the developer workflow React provides
+to hardware. Imagine what people will create when we can provide educational
+warnings and alerts during the code-writing phase. Imagine running your hardware
+code in a browser attached to <a href="https://github.com/facebook/react-devtools">React Developer Tools</a>
+to inspect and manipulate the state of your board on the fly. What becomes
+possible when Dan Abramov’s <a href="http://gaearon.github.io/react-hot-loader/">React Hot Loader</a>
+is connected to your hardware devices?</p>
+<p>Currently, the code works for digital and analog writes and reads. Adding simple
+components has become <a href="https://gist.github.com/iamdustan/d4e924e7766967130bd0">quite trivial</a>.
+Although the project is in it’s early days, you can get started now with <code>npm install react-hardware</code>.
+There are still a few core React things that need to be completed before an
+official release of any sort.</p>
+<h2>What’s next?</h2>
+<p>I’m currently in the process of rewriting the entire codebase to be simpler and
+more idiomatic as well as align with the direction React is going. Unit tests
+are good to have, too. What you find on github today is a great proof of
+concept. What will be coming soon is a real project with documentation, tests,
+and integration into the greater React ecosystem.</p>
+</div><hr style="margin-bottom:3rem;" data-reactid=".1kjblk8peyo.0:1.3"/><noscript data-reactid=".1kjblk8peyo.0:1.4"></noscript><div data-reactid=".1kjblk8peyo.0:1.5"><img src="/iamdustan.jpg" style="border:1px solid #fff;box-shadow:0 0 2px rgba(0, 0, 0, 0.125);float:left;transform:rotate(90deg);margin-top:0.5rem;width:3.75rem;" data-reactid=".1kjblk8peyo.0:1.5.0"/><p style="margin-left:3.375rem;" data-reactid=".1kjblk8peyo.0:1.5.1"><span data-reactid=".1kjblk8peyo.0:1.5.1.0">These words brought to you by </span><strong data-reactid=".1kjblk8peyo.0:1.5.1.1">Dustan Kasten</strong><span data-reactid=".1kjblk8peyo.0:1.5.1.2">. A friendly, bearded, husband, father, and user interface engineer living in Charlotte, NC. Considers himself quite partial to React.js these days. </span><a href="https://twitter.com/iamdustan" data-reactid=".1kjblk8peyo.0:1.5.1.3">Find @iamdustan on Twitter</a></p></div></div><footer style="color:#999;font-size:0.75rem;text-align:right;" data-reactid=".1kjblk8peyo.0:2"><span data-reactid=".1kjblk8peyo.0:2.0"><span data-reactid=".1kjblk8peyo.0:2.0.0">Content licensed under </span><a href="http://creativecommons.org/licenses/by-nc/4.0/" data-reactid=".1kjblk8peyo.0:2.0.1">CC BY-NC 4.0</a></span></footer><span style="display:block;clear:both;" data-reactid=".1kjblk8peyo.1"> </span></div></div><script src="/bundle.js"></script><script></script></body></html>

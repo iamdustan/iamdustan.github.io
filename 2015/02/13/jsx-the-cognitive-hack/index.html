@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title></title><link rel="shortcut icon"/><link href="//fonts.googleapis.com/css?family=Lato:100,400,700,900" rel="stylesheet" type="text/css"/><style id="typography.js">/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+html {
+  box-sizing: border-box;
+  font-size: 125%;
+  line-height: 1.5em;
+  overflow-y: scroll;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: hsl(0,0%,20%);
+  font-family: Lora;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* Make image responsive by default */
+img {
+  max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dl,dd,p,figure,pre,table,fieldset,blockquote,form,noscript,iframe,img,hr {
+margin: 0;
+margin-bottom: 1.5rem;
+padding: 0;
+}
+
+blockquote {
+margin: 1.5rem 3.75rem;
+}
+
+b,strong {
+font-weight: 700
+}
+
+hr {
+background: hsl(0,0%,80%);
+border: none;
+height: 1px;
+margin-bottom: calc(1.5rem - 1px);
+}
+
+ol,ul {
+list-style-position: outside;
+margin-left: 1.5rem;
+}
+
+ul li,ol li {
+padding-left: 0;
+}
+
+code,kbd,pre,samp {
+font-size: 0.85rem;
+line-height: 1.5rem;
+}
+
+table {
+font-size: 1rem;
+line-height: 2.25rem;
+width: 100%;
+}
+
+thead {
+text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+color: hsl(0,0%,25%);
+font-family: Open Sans;
+font-weight: 900;
+}
+
+h1 {
+font-size: 4.23607rem;
+line-height: 4.5rem;
+}
+
+h2 {
+font-size: 2.61803rem;
+line-height: 3rem;
+}
+
+h3 {
+font-size: 1.61803rem;
+line-height: 2.25rem;
+}
+
+h4 {
+font-size: 1.37824rem;
+line-height: 2.25rem;
+}
+
+h5 {
+font-size: 1.17398rem;
+line-height: 1.5rem;
+}
+
+h6 {
+font-size: 1rem;
+line-height: 1.5rem;
+}
+
+
+</style><link rel="stylesheet" href="/styles.css"/></head><body class="landing-page"><div id="react-mount"><div style="max-width:36rem;margin-left:auto;margin-right:auto;padding:3rem 0.75rem;" data-reactid=".i3c0k9kem8" data-react-checksum="1532984965"><h3 data-reactid=".i3c0k9kem8.0:0"><a style="text-decoration:none;color:inherit;" class="" href="/" data-reactid=".i3c0k9kem8.0:0.0">iamdustan.com</a></h3><div class="markdown" data-reactid=".i3c0k9kem8.0:1"><h1 data-reactid=".i3c0k9kem8.0:1.0">JSX. The Cognitive Hack</h1><em style="display:block;margin-bottom:3rem;" data-reactid=".i3c0k9kem8.0:1.1"><span data-reactid=".i3c0k9kem8.0:1.1.0">Posted </span><span data-reactid=".i3c0k9kem8.0:1.1.1">March 1, 2016</span></em><div data-reactid=".i3c0k9kem8.0:1.2"><p>This short article is intended to convince the JSX holdouts a little bit more on
+why HTML in your JavaScript through JSX is a great idea.</p>
+<hr>
+<p>For years we’ve been taught—and in turn echoed the belief—that HTML is our
+structure and JS is our behavior layer. <strong>HTML should only go in *.html
+files.</strong> Now I am certain there are some historical reasons for this, many of
+which are likely still relevant if you work in a DOM-as-source-of-truth world.</p>
+<p>Then you look at this thing React which speaks of itself as a library for
+building UIs and it spits mud in the face of all you hold dear by sticking
+this HTML <strong>right in the daggum middle of your JavaScript file. What lunacy is
+this?!?!</strong></p>
+<p>Let’s take a step back and give the engineers who built this the benefit of the
+doubt for a moment. These are, inarguably, extremely intelligent individuals
+working on projects at scale, both in terms of developers touching the codebase
+and product size. Not only that, they’re eating their dogfood by using this in
+production. (For the uninitiated, React was originally created by the engineers
+at Facebook and Instagram where they use it to power their web products.)</p>
+<p>Knee-jerk reactions are expected, but let’s move beyond that for a moment.
+To echo the sentiments of other folks: <strong>give React half a day</strong>. Literally. If you
+already have experience building UIs, you can be productive and confident with
+what you are writing with React in a mere 4 hours.</p>
+<p>React’s approach fundamentally joins two disparate joints of the same limb
+together. Yes, your structure and behavior are no longer spread across
+technologies or files. With React components these two parts of the same thing
+travel together and <em>cannot</em> be separated.</p>
+<h2>A short example</h2>
+<p>Let’s say we want the expressive power of an iOS or Android style <code>Switch</code>
+component.  Transferring this concept to the web in a <code>form</code>-based way, I would
+choose to create some HTML around a <code>checkbox</code> input to accomplish this because
+the interface I would expect for a <code>switch</code> is identical to that of a <code>switch</code>.</p>
+<ul>
+<li><code>onChange</code> event handlers</li>
+<li><code>checked</code> state (only slightly different semantics from <code>on|off</code>)</li>
+<li><code>name</code></li>
+<li><code>id</code></li>
+<li><code>label</code></li>
+<li>et cetera</li>
+</ul>
+<p>First, let’s take a quick look at what consuming this component looks like. What
+I would would want as the application developer would look something like this:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/api/endpoint"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"POST"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Send robots to hug Dustan?"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">{true}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>Very clear and very expressive, no? Now let’s implement this with React.</p>
+<pre><code class="language-jsx"><span class="hljs-comment">/**
+ * An iOS or Android style Switch element.
+ * The interface is that of a standard input[type="checkbox"] control, with the
+ * addition of a `label` property.
+ * 
+ * Pseudo-ASCII-art UI:
+ *   On:  (•|_)
+ *   Off: (_|•)
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Switch</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  getInitialState() {
+    <span class="hljs-keyword">return</span> {id : <span class="hljs-keyword">this</span>.props.id || UUID()};
+  }
+
+  render() {
+    <span class="hljs-keyword">var</span> {label, ...props} = <span class="hljs-keyword">this</span>.props;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">htmlFor</span>=<span class="hljs-string">{this.state.id}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"Switch"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"Switch-label"</span>&gt;</span>{label}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"Switch-ui"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>
+            <span class="hljs-attr">className</span>=<span class="hljs-string">"Switch-input"</span>
+            <span class="hljs-attr">name</span>=<span class="hljs-string">{this.state.id}</span>
+            {<span class="hljs-attr">...props</span>} /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"switch__toggle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    );
+  }
+}
+</span></code></pre>
+<p>Speaking only of the JSX part, part of the beauty is that it creates an
+automatic cognitive context switch due to the clear, visual structural change.
+There is a tight coupling between your behavior and your view. React components
+embrace this innate fact and marry them together in a sane and maintainable way;
+they co-locate these related concerns.</p>
+<p><strong>JSX is the affordance for your brain to automatically context switch.</strong> This
+switch from behavior to view requires no additional effort on your part.</p>
+<h2>What about my other concerns?</h2>
+<p>Granted, this leaves a few pieces of your components concerns out of the
+picture. Namely, style and data fetching. The React team isn’t prescriptive
+about how <em>you</em> choose to solve these problems.</p>
+<p>There are a number of CSS in JavaScript approaches (more blasphemy!) such as
+<a href="https://github.com/chenglou/rcss">RCSS</a> and
+<a href="https://github.com/js-next/react-style">react-style</a>, and
+<a href="https://github.com/reactjs/react-future/blob/master/04%20-%20Layout/04%20-%20Inline%20Styles.md">react-future/layout</a>.
+I would highly recommend Christopher Chedou’s slides on the subject:
+<a href="https://speakerdeck.com/vjeux/react-css-in-js">react-css-in-js</a></p>
+<p>For data fetching, GraphQL was just announced at React Conf and it is seriously
+blowing my mind. Watch the video <a href="https://www.youtube.com/watch?v=9sc8Pyc51uU">Data fetching for React applications at
+Facebook</a> and read the Q&amp;A on <a href="https://gist.github.com/wincent/598fa75e22bdfa44cf47">this
+gist</a> by one of
+the designers of the system: Nick Schrock.</p>
+</div><hr style="margin-bottom:3rem;" data-reactid=".i3c0k9kem8.0:1.3"/><noscript data-reactid=".i3c0k9kem8.0:1.4"></noscript><div data-reactid=".i3c0k9kem8.0:1.5"><img src="/iamdustan.jpg" style="border:1px solid #fff;box-shadow:0 0 2px rgba(0, 0, 0, 0.125);float:left;transform:rotate(90deg);margin-top:0.5rem;width:3.75rem;" data-reactid=".i3c0k9kem8.0:1.5.0"/><p style="margin-left:3.375rem;" data-reactid=".i3c0k9kem8.0:1.5.1"><span data-reactid=".i3c0k9kem8.0:1.5.1.0">These words brought to you by </span><strong data-reactid=".i3c0k9kem8.0:1.5.1.1">Dustan Kasten</strong><span data-reactid=".i3c0k9kem8.0:1.5.1.2">. A friendly, bearded, husband, father, and user interface engineer living in Charlotte, NC. Considers himself quite partial to React.js these days. </span><a href="https://twitter.com/iamdustan" data-reactid=".i3c0k9kem8.0:1.5.1.3">Find @iamdustan on Twitter</a></p></div></div><footer style="color:#999;font-size:0.75rem;text-align:right;" data-reactid=".i3c0k9kem8.0:2"><span data-reactid=".i3c0k9kem8.0:2.0"><span data-reactid=".i3c0k9kem8.0:2.0.0">Content licensed under </span><a href="http://creativecommons.org/licenses/by-nc/4.0/" data-reactid=".i3c0k9kem8.0:2.0.1">CC BY-NC 4.0</a></span></footer><span style="display:block;clear:both;" data-reactid=".i3c0k9kem8.1"> </span></div></div><script src="/bundle.js"></script><script></script></body></html>
