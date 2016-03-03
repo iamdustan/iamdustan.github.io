@@ -1,23 +1,6 @@
-
-const MONTHS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-]
-
-const toMonth = (index) => MONTHS[index]
-const toDate = (date) => `${Number(date)}`
+import moment from 'moment'
 
 export const pathToDate = (path) => {
-  const dateParts = path.slice(0, 10).split('-')
-  return `${toMonth(Number(dateParts[1]))} ${toDate(dateParts[2])}, ${dateParts[0]}`
+  const dateParts = path.replace(/^\//, '').slice(0, 10)
+  return moment(dateParts).format('MMMM D, YYYY')
 }

@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react'
-import moment from 'moment'
+import {pathToDate} from '../utils'
 import DocumentTitle from 'react-document-title'
 import {link} from 'gatsby-helpers'
 import ReadNext from '../components/ReadNext'
@@ -11,7 +11,9 @@ import '../css/zenburn.css'
 class MarkdownWrapper extends Component {
   render() {
     const {route} = this.props
+    const {path} = route
     const post = route.page.data
+    console.log(this.props)
 
     return (
       <DocumentTitle title={`${post.title} | ${config.blogTitle}`}>
@@ -23,7 +25,7 @@ class MarkdownWrapper extends Component {
               marginBottom: rhythm(2),
             }}
           >
-            Posted {moment(post.date).format('MMMM D, YYYY')}
+            Posted {pathToDate(path)}
           </em>
           <div dangerouslySetInnerHTML={{__html: post.body}}/>
           <hr
