@@ -4,15 +4,21 @@ const options = {
   baseFontSize: '20px',
   baseLineHeight: '30px',
   modularScales: ['major third'],
-  googleFonts: [{
-    name: 'Lato',
-    styles: [
-      '100',
-      '400',
-      '700',
-      '900',
-    ],
-  }],
+  googleFonts: [
+    {
+      name: 'Lora',
+      styles: [
+        '900',
+      ],
+    },
+    {
+      name: 'Open Sans',
+      styles: [
+        '400',
+        '700',
+      ],
+    },
+  ],
   headerFontFamily: 'Open Sans',
   bodyFontFamily: 'Lora',
   headerGray: '25',
@@ -22,12 +28,6 @@ const options = {
   headerWeight: '900',
   bodyWeight: 400,
   boldWeight: 700,
-  fontFaces: [],
-  googleBodyFont: 'Lora',
-  showVerticalRhythmGrid: false,
-  bodyFont: 'Lora',
-  googleHeaderFont: 'Open Sans',
-  headerFont: 'Open Sans',
 }
 
 const typography = new Typography(options)
