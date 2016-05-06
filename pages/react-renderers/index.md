@@ -21,4 +21,5 @@ file that includes the entry-point to a renderer implementation.
 * [React Symphony](https://github.com/Kasu/symphony/blob/5c48f5f8a6a23b1fdb17f6958ddbc83fb99c64ac/lib/surface/react/ReactSurfaceInjection.js)
 * [ReactThreeRenderer](https://github.com/toxicFork/react-three-renderer)
 * [ReactTitanium](https://github.com/yuchi/react-titanium)
+* [React Worker DOM](http://web-perf.github.io/react-worker-dom/)
 
