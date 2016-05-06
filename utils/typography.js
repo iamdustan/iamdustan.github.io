@@ -8,13 +8,14 @@ const options = {
     {
       name: 'Lora',
       styles: [
+        '400',
+        '400italic',
         '700',
       ],
     },
     {
       name: 'Open Sans',
       styles: [
-        '400',
         '700',
       ],
     },
