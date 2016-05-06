@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react'
 import {Link} from 'react-router'
 import sortBy from 'lodash/sortBy'
 import DocumentTitle from 'react-document-title'
-import {link} from 'gatsby-helpers'
+import {prefixLink} from 'gatsby-helpers'
 import {rhythm} from 'utils/typography'
 import {pathToDate} from 'utils'
 import access from 'safe-access'
@@ -11,7 +11,8 @@ import {config} from 'config'
 class BlogIndex extends Component {
   render() {
     // Sorted pages.
-    const pageLinks = sortBy(this.props.route.pages, (page) =>
+    const pages = this.props.route.pages.filter((page) => page.data.layout === 'post')
+    const pageLinks = sortBy(pages, (page) =>
       access(page, 'data.date')
     ).reverse().map((page) => {
       if (access(page, 'file.ext') === 'md') {
@@ -23,7 +24,7 @@ class BlogIndex extends Component {
               marginBottom: rhythm(1/4),
             }}
           >
-            <Link to={link(page.path)}>{title}</Link>
+            <Link to={prefixLink(page.path)}>{title}</Link>
             <div style={{fontSize: 12, color: '#999', lineHeight: 1}}>
               {pathToDate(page.file.path)}
             </div>
@@ -36,7 +37,7 @@ class BlogIndex extends Component {
         <div>
           <div>
             <img
-              src={link('/iamdustan.jpg')}
+              src={prefixLink('/iamdustan.jpg')}
               style={{
                 border: '1px solid #fff',
                 boxShadow: '0 0 2px rgba(0, 0, 0, 0.125)',

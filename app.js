@@ -15,4 +15,5 @@ exports.rewritePath = (parsedFilePath, metadata) => {
   if (dateParts) {
     return `/${dateParts[1]}/${dateParts[2]}/${dateParts[3]}/${dateParts[4]}/`
   }
+  return ''
 }

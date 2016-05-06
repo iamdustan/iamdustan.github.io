@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react'
 import {Link} from 'react-router'
 import {Container} from 'react-responsive-grid'
-import {link} from 'gatsby-helpers'
+import {prefixLink} from 'gatsby-helpers'
 import {rhythm, fontSizeToMS} from 'utils/typography'
 import {config} from 'config'
 
@@ -11,7 +11,7 @@ class Template extends Component {
   render() {
     const {location, children} = this.props
     let header
-    if (location.pathname === link('/')) {
+    if (location.pathname === prefixLink('/')) {
       header = (
         <h1
           style={{
@@ -25,7 +25,7 @@ class Template extends Component {
               textDecoration: 'none',
               color: 'inherit',
             }}
-            to={link('/')}
+            to={prefixLink('/')}
           >
             {config.blogTitle}
           </Link>
@@ -39,7 +39,7 @@ class Template extends Component {
               textDecoration: 'none',
               color: 'inherit',
             }}
-            to={link('/')}
+            to={prefixLink('/')}
           >
             {config.blogTitle}
           </Link>
@@ -53,6 +53,7 @@ class Template extends Component {
           padding: `${rhythm(2)} ${rhythm(1/2)}`,
         }}
       >
+        <Link to={prefixLink('/projects/')}>Projects</Link>
         {header}
         {children}
         <footer

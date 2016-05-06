@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 import DocumentTitle from 'react-document-title'
-import {link} from 'gatsby-helpers'
+import {prefixLink} from 'gatsby-helpers'
 import {GoogleFont, TypographyStyle} from 'utils/typography'
 
 export default class Html extends Component {
@@ -13,7 +13,7 @@ export default class Html extends Component {
 
     let cssLink
     if (process.env.NODE_ENV === 'production') {
-      cssLink = <link rel="stylesheet" href={link('/styles.css')} />
+      cssLink = <link rel="stylesheet" href={prefixLink('/styles.css')} />
     }
 
     return (
@@ -33,7 +33,7 @@ export default class Html extends Component {
         </head>
         <body className="landing-page">
           <div id="react-mount" dangerouslySetInnerHTML={{__html: body}} />
-          <script src={link('/bundle.js')}/>
+          <script src={prefixLink('/bundle.js')}/>
           {/* eslint-disable */}
           <script dangerouslySetInnerHTML={{ __html:
             "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=" +
