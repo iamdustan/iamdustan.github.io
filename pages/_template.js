@@ -15,6 +15,7 @@ class Template extends Component {
       header = (
         <h1
           style={{
+            display: 'inline-block',
             fontSize: fontSizeToMS(2.5).fontSize,
             lineHeight: fontSizeToMS(2.5).lineHeight,
             marginBottom: rhythm(1.5),
@@ -33,7 +34,7 @@ class Template extends Component {
       )
     } else {
       header = (
-        <h3>
+        <h3 style={{display: 'inline-block'}}>
           <Link
             style={{
               textDecoration: 'none',
@@ -53,8 +54,11 @@ class Template extends Component {
           padding: `${rhythm(2)} ${rhythm(1/2)}`,
         }}
       >
-        <Link to={prefixLink('/projects/')}>Projects</Link>
-        {header}
+        <div>
+          {header}
+          <Link to={prefixLink('/projects/')} style={{marginLeft: '1em'}}>Projects</Link>
+          <Link to={prefixLink('/')} style={{marginLeft: '0.5em'}}>Blog</Link>
+        </div>
         {children}
         <footer
           style={{
