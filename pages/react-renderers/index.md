@@ -38,4 +38,6 @@ file that includes the entry-point to a renderer implementation.
   The [Titanium SDK](http://www.appcelerator.org/#titanium) is a JS library to build cross-device experiences.
 * [**React Worker DOM**](http://web-perf.github.io/react-worker-dom/).
   A high-quality experiment to improve React performance by running in a WebWorker.
+* [**React X11**](https://github.com/sidorares/react-x11).
+  A renderer targeting x11.
 
