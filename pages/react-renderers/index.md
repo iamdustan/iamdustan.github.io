@@ -20,6 +20,7 @@ file that includes the entry-point to a renderer implementation.
   The original [React.js](http://facebook.github.io/react/)
 * [**ReactDOM/server**](https://github.com/facebook/react/tree/b6a60781677bcdace8f41457d50412096f98d74a/src/renderers/dom/server).
   The original [React.js](http://facebook.github.io/react/)
+* [**React Streaming DOM**](https://github.com/aickin/react-dom-stream)
 * [**ReactGibbon (ReactConf talk with reference)**](https://www.youtube.com/watch?v=eNC0mRYGWgc).
   Gibbon is a proprietary rendering engine by Netflix to power many of their
   experiences.
