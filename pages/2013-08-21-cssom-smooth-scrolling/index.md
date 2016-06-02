@@ -6,6 +6,8 @@ tags:
 summary: 
 ---
 
+**Update: demo and documentation site: [iamdustan.com/smoothscroll/](http://iamdustan.com/smoothscroll/)**
+
 ## Coming soon to a browser near you
 
 Paul Irish recently shared on [Google+](https://plus.google.com/+PaulIrish/posts/XgLrpPS8vm8)
