@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react'
 import {Link} from 'react-router'
 import {Container} from 'react-responsive-grid'
 import {prefixLink} from 'gatsby-helpers'
-import {rhythm, fontSizeToMS} from 'utils/typography'
+import {rhythm, adjustFontSizeToMSValue} from 'utils/typography'
 import {config} from 'config'
 
 import '../css/styles.css'
@@ -16,8 +16,8 @@ class Template extends Component {
         <h1
           style={{
             display: 'inline-block',
-            fontSize: fontSizeToMS(2.5).fontSize,
-            lineHeight: fontSizeToMS(2.5).lineHeight,
+            fontSize: adjustFontSizeToMSValue(7/5).fontSize,
+            lineHeight: adjustFontSizeToMSValue(7/5).lineHeight,
             marginBottom: rhythm(1.5),
           }}
         >
@@ -63,7 +63,7 @@ class Template extends Component {
         <footer
           style={{
             color: '#999',
-            fontSize: fontSizeToMS(-1).fontSize,
+            fontSize: adjustFontSizeToMSValue(-1).fontSize,
             textAlign: 'right',
           }}
         >

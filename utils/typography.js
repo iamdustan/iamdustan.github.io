@@ -1,9 +1,9 @@
 import Typography from 'typography'
+import CodePlugin from 'typography-plugin-code'
 
 const options = {
   baseFontSize: '20px',
   baseLineHeight: '30px',
-  modularScales: ['major third'],
   googleFonts: [
     {
       name: 'Lora',
@@ -20,15 +20,16 @@ const options = {
       ],
     },
   ],
-  headerFontFamily: 'Open Sans',
-  bodyFontFamily: 'Lora',
+  headerFontFamily: ['Open Sans', 'sans-serif'],
+  bodyFontFamily: ['Lora', 'serif'],
   headerGray: '25',
-  headerGrayHue: 0,
   bodyGray: 20,
-  bodyGrayHue: 0,
-  headerWeight: '700',
+  headerWeight: 700,
   bodyWeight: 400,
   boldWeight: 700,
+  plugins: [
+    new CodePlugin(),
+  ],
 }
 
 const typography = new Typography(options)
