@@ -1,7 +1,8 @@
 import React, {Component, PropTypes} from 'react'
 import DocumentTitle from 'react-document-title'
 import {prefixLink} from 'gatsby-helpers'
-import {GoogleFont, TypographyStyle} from 'utils/typography'
+import {GoogleFont, TypographyStyle} from 'react-typography'
+import typography from './utils/typography'
 
 export default class Html extends Component {
   render() {
@@ -27,8 +28,8 @@ export default class Html extends Component {
           />
           <title>{this.props.title}</title>
           <link rel="shortcut icon" href={favicon} />
-          <GoogleFont/>
-          <TypographyStyle/>
+          <GoogleFont typography={typography} />
+          <TypographyStyle typography={typography} />
           {cssLink}
         </head>
         <body className="landing-page">
