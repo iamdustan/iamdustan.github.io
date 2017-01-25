@@ -43,15 +43,19 @@ class BlogIndex extends Component {
                 boxShadow: '0 0 2px rgba(0, 0, 0, 0.125)',
                 float: 'left',
                 transform: 'rotate(90deg)',
-                marginTop: rhythm(1/3),
+                marginTop: rhythm(2/3),
                 width: rhythm(2.5),
               }}
             />
-            <p style={{marginLeft: rhythm(9/4)}}>
+            <p style={{marginLeft: rhythm(11/4)}}>
               The following words are the semi-original thought of <strong>
               {config.authorName}</strong>—a friendly, bearded, husband, father,
               and user interface engineer living in Charlotte, NC. Dustan
-              considers himself quite partial to React.js these days. <a href="https://twitter.com/iamdustan">Find @iamdustan on Twitter</a>
+              considers himself quite partial to React.js these days.<br />
+              <small>
+                <a href="https://twitter.com/iamdustan">Find @iamdustan on Twitter</a> or
+                talk to him on <a href="https://calendly.com/iamdustan">calendly.com/iamdustan</a>.
+              </small>
             </p>
           </div>
           <ul>
