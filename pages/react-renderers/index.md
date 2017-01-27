@@ -41,4 +41,5 @@ file that includes the entry-point to a renderer implementation.
   A high-quality experiment to improve React performance by running in a WebWorker.
 * [**React X11**](https://github.com/sidorares/react-x11).
   A renderer targeting x11.
-
+* [**React Konsul**](https://mohebifar.github.io/konsul/). Browser console
+  renderer.
