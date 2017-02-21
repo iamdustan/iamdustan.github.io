@@ -18,7 +18,8 @@ $ ocapic \
     [ <pic> ] \
     [ OCAMLC_OPTS ] \
     [ OPTIONS ] \
-    -pp "refmt -parse re -print ml" <source.re.ml>
+    -pp "refmt -parse re -print ml" <source.re.ml> \
+    -o <source.asm> # manually define output, otherwise all files will be `source.re.`
 ```
 
 ## Install and setup all the things!
@@ -75,7 +76,7 @@ $ ocapic \
     18f4620 \
     config.asm \
     -pp "refmt -parse re -print ml" led.re.ml \
-    -o led
+    -o led.asm
 ```
 
 ## Running the Emulator
