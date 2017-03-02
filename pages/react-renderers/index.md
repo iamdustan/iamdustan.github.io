@@ -43,3 +43,8 @@ file that includes the entry-point to a renderer implementation.
   A renderer targeting x11.
 * [**React Konsul**](https://mohebifar.github.io/konsul/). Browser console
   renderer.
+* [**mylittledom**](https://github.com/manaflair/mylittledom/blob/master/sources/term/react.js).
+  High-level DOM-like terminal interface library.
+* [**react-pdf**](https://github.com/diegomura/react-pdf).
+  Create PDF files using React
+
