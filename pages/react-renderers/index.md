@@ -47,4 +47,6 @@ file that includes the entry-point to a renderer implementation.
   High-level DOM-like terminal interface library.
 * [**react-pdf**](https://github.com/diegomura/react-pdf).
   Create PDF files using React
+* [**react-ionize**](https://github.com/mhink/react-ionize).
+  A React Fiber renderer for Electron apps
 
