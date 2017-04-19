@@ -49,4 +49,8 @@ file that includes the entry-point to a renderer implementation.
   Create PDF files using React
 * [**react-ionize**](https://github.com/mhink/react-ionize).
   A React Fiber renderer for Electron apps
+* [**canvas-immediate**](https://gist.github.com/prometheansacrifice/6e2c75ea5df988c4ae6ea778710287ba)
+  Canvas Immediate mode rendering using React
+* [**hig-react-fiber**](https://github.com/Autodesk/orion-ui/tree/7af381d1e573ec47b5d31f155fd09fafaf7e3982/packages/hig-custom-fiber-renderer)
+  React Renderer for hig-web — a part of Autodesk’s Orion UI framework.
 
