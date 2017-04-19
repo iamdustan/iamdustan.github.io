@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title></title><link rel="shortcut icon"/><link href="//fonts.googleapis.com/css?family=Lora:400,400italic,700|Open+Sans:700" rel="stylesheet" type="text/css"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font-size:125%;line-height:1.5em;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsl(0,0%,20%);font-family:Lora,serif;font-weight:400;word-wrap:break-word;}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;color:hsl(0,0%,25%);font-family:Open Sans,sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:2.25rem;}h2{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;color:hsl(0,0%,25%);font-family:Open Sans,sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.7411rem;line-height:2.25rem;}h3{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;color:hsl(0,0%,25%);font-family:Open Sans,sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:2.25rem;}h4{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;color:hsl(0,0%,25%);font-family:Open Sans,sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:2.25rem;}h5{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;color:hsl(0,0%,25%);font-family:Open Sans,sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.1487rem;line-height:1.5rem;}h6{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;color:hsl(0,0%,25%);font-family:Open Sans,sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.5rem;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}p{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding:1.5rem;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.42;background:hsl(0,0%,97%);border-radius:3px;overflow:auto;}table{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}blockquote{margin-left:1.5rem;margin-right:1.5rem;margin-top:0;padding:0;margin-bottom:1.5rem;}form{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:calc(1.5rem - 1px);background:hsl(0,0%,80%);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding:0;margin-bottom:1.5rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.5rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsl(0,0%,50%);cursor:help;}acronym{border-bottom:1px dotted hsl(0,0%,50%);cursor:help;}abbr[title]{border-bottom:1px dotted hsl(0,0%,50%);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsl(0,0%,88%);padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}@media only screen and (max-width:768px){h1{font-size:2rem;line-height:2.25rem;}h2{font-size:1.7411rem;line-height:2.25rem;}h3{font-size:1.51572rem;line-height:2.25rem;}h4{font-size:1.31951rem;line-height:2.25rem;}h5{font-size:1.1487rem;line-height:1.5rem;}h6{font-size:1rem;line-height:1.5rem;}}tt,code{background-color:rgba(0,0,0,0.04);border-radius:3px;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;padding:0;padding-top:0.2em;padding-bottom:0.2em;}pre code{background:hsl(0,0%,97%);line-height:1.42;}code:before,code:after,tt:before,tt:after{letter-spacing:-0.2em;content:" ";}pre code:before,pre code:after,pre tt:before,pre tt:after{content:"";}</style><link rel="stylesheet" href="/styles.css"/></head><body class="landing-page"><div id="react-mount"><div style="max-width:36rem;margin-left:auto;margin-right:auto;padding:3rem 0.75rem;" data-reactroot="" data-reactid="1" data-react-checksum="-1642518698"><div data-reactid="2"><h3 style="display:inline-block;" data-reactid="3"><a style="text-decoration:none;color:inherit;" href="/" data-reactid="4">iamdustan.com</a></h3><a style="margin-left:1em;" href="/projects/" data-reactid="5">Projects</a><a style="margin-left:0.5em;" href="/" data-reactid="6">Blog</a></div><div class="markdown" data-reactid="7"><h1 data-reactid="8">Books of 2013</h1><em style="display:block;margin-bottom:3rem;" data-reactid="9"><!-- react-text: 10 -->Posted <!-- /react-text --><!-- react-text: 11 -->January 9, 2014<!-- /react-text --></em><div data-reactid="12"><p>After accidentally reading 42 books in 2012, I had quietly set myself
+the goal of reaching 52 books in 2013. With a last minute book off of
+Lean Pub I pulled it off with 1 minute 12 seconds to spare.</p>
+<h2>The List</h2>
+<table class="numbered">
+  <thead>
+    <tr>
+      <th scope="col"><span class="visuallyhidden">Number</span></th>
+      <th scope="col">Book</th>
+      <th scope="col">Author</th>
+      <th scope="col" style="width:7em">Finished Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Foundation</td>
+      <td>Isaac Asimov</td>
+      <td>January 1st</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Foundation and Empire</td>
+      <td>Isaac Asimov</td>
+      <td>January 5th</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Second Foundation</td>
+      <td>Isaac Asimov</td>
+      <td>January 10th</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Accessibility Handbook</td>
+      <td>Katie Cunningham</td>
+      <td>January 11th</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>The Circle Maker</td>
+      <td>Mark Batterson</td>
+      <td>January 22nd</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Magic Hours</td>
+      <td>Tom Bissell</td>
+      <td>January 31st</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Farm Anatomy</td>
+      <td>Julia Rothman</td>
+      <td>February 7th</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Einstein. His Life and Universe</td>
+      <td>Walter Isaacson</td>
+      <td>March 20th</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Gamestorming</td>
+      <td>Gray, Brown, Macanufo</td>
+      <td>March 28th</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>The No-Cry Sleep Solution</td>
+      <td>Elizabeth Pantley</td>
+      <td>April 2nd</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Love Wins</td>
+      <td>Rob Bell</td>
+      <td>April 6th</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Outliers</td>
+      <td>Malcolm Gladwell</td>
+      <td>April 13th</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Peopleware</td>
+      <td>Tim and Tom</td>
+      <td>April 26th</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Winning the Story Wars</td>
+      <td>Jonah Sachs</td>
+      <td>May 2nd</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>SVG Essentials</td>
+      <td>J. Eisenberg</td>
+      <td>May 5th</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Writing Stories</td>
+      <td>Ben Rinzler</td>
+      <td>May 8th</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>You Have More Than You Think</td>
+      <td>David and Tom Gardner</td>
+      <td>May 15th</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Ender&rsquo;s Shadow</td>
+      <td>Orson Scott Card</td>
+      <td>May 21st</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Shadow of the Hegemon</td>
+      <td>Orson Scott Card</td>
+      <td>May 25th</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Shadow Puppets</td>
+      <td>Orson Scott Card</td>
+      <td>June 2nd</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Shadow of the Giant</td>
+      <td>Orson Scott Card</td>
+      <td>June 8th</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Total Money Makeover</td>
+      <td>Dave Ramsey</td>
+      <td>June 17th</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Tmux</td>
+      <td>Brian Hogan</td>
+      <td>June 30th</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Supercharged JavaScript Graphics</td>
+      <td>Raffaele Cecco</td>
+      <td>July 7th</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Lean Startup</td>
+      <td>Eric Ries</td>
+      <td>July 7th</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>The Mythical Man-Month</td>
+      <td>Fredrick Brooks, Jr.</td>
+      <td>July 15th</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Effective JavaScript</td>
+      <td>David Herman</td>
+      <td>July 26th</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Practical Vim</td>
+      <td>Drew Neil</td>
+      <td>August 6th</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>JavaScript Design Patterns</td>
+      <td>Addy Osmani</td>
+      <td>August 18th</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Thinking Fast and Slow</td>
+      <td>Daniel Kahneman</td>
+      <td>September 18th</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>Fatherhood</td>
+      <td>Bill Cosby</td>
+      <td>September 20th</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Dune</td>
+      <td>Frank Herbert</td>
+      <td>September 27th</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Muad'Dib</td>
+      <td>Frank Herbert</td>
+      <td>September 28th</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>The Prophet</td>
+      <td>Frank Herbert</td>
+      <td>September 29th</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>"JS.next: A Manager&rsquo;s Guide"</td>
+      <td>Aaron Frost</td>
+      <td>October 1st</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>I Didn&rsquo;t Ask To Be Born (But I&rsquo;m Glad I Was)</td>
+      <td>Bill Cosby</td>
+      <td>October 2nd</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>Mystic Moosetales</td>
+      <td>Robin McMillan</td>
+      <td>October 9th</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>EntreLeader</td>
+      <td>Dave Ramsey</td>
+      <td>October 21st</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>Learn You A Haskell For Great Good</td>
+      <td>Miran Lipovača</td>
+      <td>October 28th</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>JavaScript Allongé</td>
+      <td>Reg Braithwaite</td>
+      <td>November 2nd</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>Smacss</td>
+      <td>Jonathan Snook</td>
+      <td>November 5th</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>Woman</td>
+      <td>Natalie Anger</td>
+      <td>December 4th</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>Lean Analytics</td>
+      <td>Alistair Croll and Benjamin Yoskovitz</td>
+      <td>December 6th</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>The Senior Software Engineer</td>
+      <td>David Bryant Copeland</td>
+      <td>December 10th</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>The Leprechauns of Software Engineering</td>
+      <td>Laurent Bossavit</td>
+      <td>December 12th</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>Personal Kanban in a Nutshell</td>
+      <td>Erik Talboom and Jurgen De Smet</td>
+      <td>December 17th</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>Earth Unaware</td>
+      <td>Orson Scott Card and Aaron Johnston</td>
+      <td>December 18th</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>High-Performance Browser Networking</td>
+      <td>Illya Grigorik</td>
+      <td>December 25th</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>The Disappearing Spoon</td>
+      <td>Masha Gessen</td>
+      <td>December 31st</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>Perfect Rigor</td>
+      <td>Masha Gessen</td>
+      <td>December 31st</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>Building Node Applications with MongoDB and Backbone</td>
+      <td>Mike Wilson</td>
+      <td>December 31st</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>The Leadership Game</td>
+      <td>Yves Hanoulle and Ignace Hanoulle</td>
+      <td>December 31st</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Highlights</h2>
+<p>There are a few stand out books from this list. First and foremost,
+<em>Thinking Fast and Slow</em> by Daniel Kahneman is a great book. I am
+fascinated by how the human mind works and this was my grand
+introduction to psychology. He discusses how our mind works as two
+different systems in an engaging way that allows for understanding to
+come as you read through. I cannot recommend this book enough.</p>
+<p>Having read the <em>Ender’s Game</em> quartet last year, I picked up the <em>Bean
+Quartet</em> by Orson Scott Card this year. The first book is the exact same
+story as <em>Ender’s Game</em>, but through Bean’s eyes. The
+following three books are a much faster paced adventure through an earth
+in a not-to-distant future.</p>
+<p><em>Love Wins</em> by Rob Bell is a book that received much attention when it
+came out—and not positive attention… I must say that as a
+Christian it greatly challenged my view of God and His love. If nothing
+else, it shows God’s love in such a greater light than what I had
+ever imagined.</p>
+<p>I can’t remember a single technical book I’ve read before
+this year that I would strongly recommend. These year there were four.</p>
+<p>David Herman and Reg Braithwaite have written the two best books on
+JavaScript. Effective JavaScript and JavaScript Allongé. If you spend
+any time at all in JavaScript at a professional level you should read
+these books.</p>
+<p>Effective JavaScript is a very thorough, dispassionate
+explanation of the JavaScript language. It does not dwell on browser
+idiosyncracies, yet equips you to understand and handle them should you
+encounter them.</p>
+<p>JavaScript Allongé is a work of art. Read the reviews on
+<a href="https://leanpub.com/javascript-allonge">https://leanpub.com/javascript-allonge</a>. Every single one of them: true.</p>
+<p>Ilya Grigorik delves into HTTP, TCP, UDP, WebRTC, WebSockets, <strong>and more</strong>
+in his <em>High-Performance Browser Networking</em>. Being a front end engineer
+for the past 3 years you may expect one to have a fairly solid grasp on
+these protocols and their history. I knew nothing about networking before
+this book.</p>
+<p><em>The Senior Software Engineer</em> by David Bryant Copeland took many of my
+thoughts about this craft and said them eloquently. It helped solidify a
+few ideas and expand others. Every software engineer should read this,
+junior or not.</p>
+<h2>2014?</h2>
+<p>No. No book reading goal. I am still reading, just for pleasure at
+whatever pace it happens to be. Currently, I’m embarking on a
+adventure through the seven kingdoms in <em>Game of Thrones</em>.</p>
+<p>I have other goals to focus on now that I have some time back. I have a
+handful of public goals on <a href="https://github.com/iamdustan/goals/issues">github</a></p>
+</div><hr style="margin-bottom:3rem;" data-reactid="13"/><noscript data-reactid="14"></noscript><div data-reactid="15"><img src="/iamdustan.jpg" style="border:1px solid #fff;box-shadow:0 0 2px rgba(0, 0, 0, 0.125);float:left;transform:rotate(90deg);margin-top:0.5rem;width:3.75rem;" data-reactid="16"/><p style="margin-left:3.375rem;" data-reactid="17"><!-- react-text: 18 -->These words brought to you by <!-- /react-text --><strong data-reactid="19">Dustan Kasten</strong><!-- react-text: 20 -->. A friendly, bearded, husband, father, and user interface engineer living in Charlotte, NC. Considers himself quite partial to React.js these days. <!-- /react-text --><a href="https://twitter.com/iamdustan" data-reactid="21">Find @iamdustan on Twitter</a></p></div></div><footer style="color:#999;font-size:0.5rem;text-align:right;" data-reactid="22"><span data-reactid="23"><!-- react-text: 24 -->Content licensed under <!-- /react-text --><a href="http://creativecommons.org/licenses/by-nc/4.0/" data-reactid="25">CC BY-NC 4.0</a></span></footer><span style="display:block;clear:both;" data-reactid="26"> </span></div></div><script src="/bundle.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-37699943-1', 'auto');ga('send', 'pageview');</script></script></body></html>
