@@ -30,6 +30,8 @@ file that includes the entry-point to a renderer implementation.
   The original custom renderer. Build native iOS and Android apps with React.
 * [**ReactNativeDesktop**](https://github.com/ptmt/react-native-desktop).
   A fork of React Native for building OSX applications.
+* [**ReactPixiFiber**](https://github.com/michalochman/react-pixi-fiber).
+  Write [PixiJS](http://www.pixijs.com/) applications using React declarative style.
 * [**ReactShallowRenderer**](https://github.com/facebook/react/blob/db175052c00a65e6a852011f889c12fea50bb34b/src/test/ReactTestUtils.js#L368-L482).
   A small renderer primarily used by [ReactTestUtils](https://facebook.github.io/react/docs/test-utils.html).
 * [**React Symphony**](https://github.com/Kasu/symphony/blob/5c48f5f8a6a23b1fdb17f6958ddbc83fb99c64ac/lib/surface/react/ReactSurfaceInjection.js).
