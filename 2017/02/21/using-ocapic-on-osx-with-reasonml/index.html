@@ -1,0 +1,88 @@
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Using Ocapic on OSX with ReasonML - Dustan Kasten</title><meta name=description content="This is just some random documentation for myself in the future or the two other people on the planet who want to mess around with Ocapic on OSX while using Reason instead of Ocaml.
+First you need to install all the things, then you need to write your souce code. If all you need is the magic incantion at the end with no explanations:
+$ ocapic \ [ <pic> ] \ [ OCAMLC_OPTS ] \ [ OPTIONS ] \ -pp &#34;refmt -parse re -print ml&#34; <source."><meta name=author content><link href=https://unpkg.com/@master/normal.css rel=stylesheet><script src=https://unpkg.com/@master/style@1.5.0></script>
+<script src=https://unpkg.com/@master/styles@1.13.0></script>
+<script src=https://unpkg.com/master-styles-group></script>
+<script src=https://unpkg.com/themes.js></script>
+<script>window.themes=window.themes||new window.Themes</script></head><body class="bg:fade-84@dark font:fade-16@dark"><nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000"><div class="h:full
+w:full
+max-w:1200
+mx:auto
+px:32
+d:flex
+align-items:center"><div><a href=/ class="mr-3 font:extralight">Dustan Kasten</a></div><div class=ml:auto></div></div></nav><div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word"><div class="max-w:700 w:full box:content-box"><article class="box:border-box pt:32"><header class=mb:32><div class="font:40 font:extrabold">Using Ocapic on OSX with ReasonML</div><div class="mt:16 f:fade-60"><time>Feb 21, 2017</time></div></header><div class="_:where(a):hover{text-decoration-color:fade}
+_:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+_:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+_:where(code){font:90%;_v:middle}
+_:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+_:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+_:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+_:where(h1){font:40;_font:extrabold}
+_:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+_:where(h1,h2,h3,h4,h5,h6){mt:2em}
+_:where(h2){mb:1em;_font:32}
+_:where(h3){font:24}
+_:where(h4){font:20}
+_:where(h5){font:16}
+_:where(h6){font:14}
+_:where(li)::marker{font:fade-44;_font:fade-68@dark}
+_:where(li){pl:.375em}
+_:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+_:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+_:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+>:first-child{mt:0!}
+_:where(pre){p:20;_r:8;_overflow:auto}
+_:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+_:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+_:where(table){width:full;_border-spacing:0}
+_:where(td){v:baseline}
+_:where(td,th):first-child{pl:0}
+_:where(td,th):last-child{pr:0}
+_:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+_:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+_:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+_:where(ul){list-style-type:disc}
+_:where(ul,ol,blockquote){pl:1.5em}
+_:where(video,img){max-width:full}
+_:where(a,mark){text-underline-offset:3}"><p>This is just some random documentation for myself in the future or the two other
+people on the planet who want to mess around with <a href="http://www.algo-prog.info/ocapic/web/index.php?id=ocapic">Ocapic</a>
+on OSX while using <a href=https://facebook.github.io/reason/>Reason</a> instead of <a href=http://www.ocaml.com/>Ocaml</a>.</p><p>First you need to install all the things, then you need to write your souce
+code. If all you need is the magic incantion at the end with no explanations:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>$ ocapic <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>[</span> &lt;pic&gt; <span style=color:#f92672>]</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>[</span> OCAMLC_OPTS <span style=color:#f92672>]</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>[</span> OPTIONS <span style=color:#f92672>]</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    -pp <span style=color:#e6db74>&#34;refmt -parse re -print ml&#34;</span> &lt;source.re.ml&gt; <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    -o &lt;source.asm&gt; <span style=color:#75715e># manually define output, otherwise all files will be `source.re.`</span>
+</span></span></code></pre></div><h2 id=install-and-setup-all-the-things>Install and setup all the things!</h2><ul><li>install <a href=http://brew.sh/>homebrew</a>. <code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li><li>install x11. <code>brew cask install xquartz</code></li><li>install ocaml with graphics. <code>brew install ocaml --with-graphics</code></li><li>Download and build ocapic from <a href="http://www.algo-prog.info/ocapic/web/index.php?id=OCAPIC:Download">http://www.algo-prog.info/ocapic/web/index.php?id=OCAPIC:Download</a></li><li>Install reason. See <a href=https://github.com/facebook/reason/blob/master/README.md#installing-via-opam>https://github.com/facebook/reason/blob/master/README.md#installing-via-opam</a></li></ul><h2 id=compiling-reason-with-ocapic>Compiling Reason with <code>ocapic</code></h2><p>The source code here is the first example in the <a href="http://www.algo-prog.info/ocapic/web/lib/exe/fetch.php?media=ocapic-tutorial-1.2.pdf">OCaPIC tutorial</a>.
+You need the two following files: <code>config.asm</code>, and <code>led.re.ml</code>. The <code>.ml</code>
+extension is because the <code>ocapic</code> command requires a <code>.ml</code> file to be passed
+in. The <code>.re</code> is a convention I use to set up my editor to read it as a Reason
+file</p><p><strong>config.asm</strong></p><pre tabindex=0><code>config OSC     = INTIO7
+config PWRT    = ON
+config BOREN   = OFF
+config WDT     = OFF
+config MCLRE   = OFF
+config PBADEN  = OFF
+config STVREN  = OFF
+config LVP     = OFF
+</code></pre><p><strong>led.re.ml</strong>
+(generated by running the tutorial’s <code>led.ml</code> through <code>refmt</code>)</p><pre tabindex=0><code>open Pic; /* Module containing write_reg, set_bit, RB0, ... */
+
+{
+  write_reg TRISB 0; /* Configure the B port as output */
+  while true {
+    set_bit RB0; /* Turn on the LED */
+    Sys.sleep 500; /* Wait 0,5s */
+    clear_bit RB0; /* Turn off the LED */
+    Sys.sleep 500 /* Wait 0,5s */
+  }
+};
+</code></pre><p>Now you can generate the bytecode necessary for the PIC microcontroller and
+emulator by running:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>$ ocapic <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    18f4620 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    config.asm <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    -pp <span style=color:#e6db74>&#34;refmt -parse re -print ml&#34;</span> led.re.ml <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    -o led.asm
+</span></span></code></pre></div><h2 id=running-the-emulator>Running the Emulator</h2><p>For the OCaml <code>Graphics</code> module, you need to run this file from with
+<a href=https://www.xquartz.org/>XQuartz</a>. This is what we installed right after
+installing homebrew before.</p><ul><li>Open up <strong>xquartz</strong></li><li><code>cd</code> to the directory where the above code is located</li><li><code>./led ocapic_dip40_simulator</code></li></ul><h2 id=enjoy>Enjoy</h2><p><img src=ocapic.gif alt="reason_of_ocapic in action"></p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8"></div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>

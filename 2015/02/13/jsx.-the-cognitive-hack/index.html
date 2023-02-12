@@ -1,0 +1,119 @@
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>JSX. The Cognitive Hack - Dustan Kasten</title><meta name=description content="This short article is intended to convince the JSX holdouts a little bit more on why HTML in your JavaScript through JSX is a great idea.
+For years we’ve been taught—and in turn echoed the belief—that HTML is our structure and JS is our behavior layer. HTML should only go in *.html files. Now I am certain there are some historical reasons for this, many of which are likely still relevant if you work in a DOM-as-source-of-truth world."><meta name=author content><link href=https://unpkg.com/@master/normal.css rel=stylesheet><script src=https://unpkg.com/@master/style@1.5.0></script>
+<script src=https://unpkg.com/@master/styles@1.13.0></script>
+<script src=https://unpkg.com/master-styles-group></script>
+<script src=https://unpkg.com/themes.js></script>
+<script>window.themes=window.themes||new window.Themes</script></head><body class="bg:fade-84@dark font:fade-16@dark"><nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000"><div class="h:full
+w:full
+max-w:1200
+mx:auto
+px:32
+d:flex
+align-items:center"><div><a href=/ class="mr-3 font:extralight">Dustan Kasten</a></div><div class=ml:auto></div></div></nav><div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word"><div class="max-w:700 w:full box:content-box"><article class="box:border-box pt:32"><header class=mb:32><div class="font:40 font:extrabold">JSX. The Cognitive Hack</div><div class="mt:16 f:fade-60"><time>Feb 13, 2015</time></div></header><div class="_:where(a):hover{text-decoration-color:fade}
+_:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+_:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+_:where(code){font:90%;_v:middle}
+_:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+_:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+_:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+_:where(h1){font:40;_font:extrabold}
+_:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+_:where(h1,h2,h3,h4,h5,h6){mt:2em}
+_:where(h2){mb:1em;_font:32}
+_:where(h3){font:24}
+_:where(h4){font:20}
+_:where(h5){font:16}
+_:where(h6){font:14}
+_:where(li)::marker{font:fade-44;_font:fade-68@dark}
+_:where(li){pl:.375em}
+_:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+_:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+_:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+>:first-child{mt:0!}
+_:where(pre){p:20;_r:8;_overflow:auto}
+_:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+_:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+_:where(table){width:full;_border-spacing:0}
+_:where(td){v:baseline}
+_:where(td,th):first-child{pl:0}
+_:where(td,th):last-child{pr:0}
+_:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+_:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+_:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+_:where(ul){list-style-type:disc}
+_:where(ul,ol,blockquote){pl:1.5em}
+_:where(video,img){max-width:full}
+_:where(a,mark){text-underline-offset:3}"><p>This short article is intended to convince the JSX holdouts a little bit more on
+why HTML in your JavaScript through JSX is a great idea.</p><hr><p>For years we’ve been taught—and in turn echoed the belief—that HTML is our
+structure and JS is our behavior layer. <strong>HTML should only go in *.html
+files.</strong> Now I am certain there are some historical reasons for this, many of
+which are likely still relevant if you work in a DOM-as-source-of-truth world.</p><p>Then you look at this thing React which speaks of itself as a library for
+building UIs and it spits mud in the face of all you hold dear by sticking
+this HTML <strong>right in the daggum middle of your JavaScript file. What lunacy is
+this?!?!</strong></p><p>Let’s take a step back and give the engineers who built this the benefit of the
+doubt for a moment. These are, inarguably, extremely intelligent individuals
+working on projects at scale, both in terms of developers touching the codebase
+and product size. Not only that, they’re eating their dogfood by using this in
+production. (For the uninitiated, React was originally created by the engineers
+at Facebook and Instagram where they use it to power their web products.)</p><p>Knee-jerk reactions are expected, but let’s move beyond that for a moment.
+To echo the sentiments of other folks: <strong>give React half a day</strong>. Literally. If you
+already have experience building UIs, you can be productive and confident with
+what you are writing with React in a mere 4 hours.</p><p>React’s approach fundamentally joins two disparate joints of the same limb
+together. Yes, your structure and behavior are no longer spread across
+technologies or files. With React components these two parts of the same thing
+travel together and <em>cannot</em> be separated.</p><h2 id=a-short-example>A short example</h2><p>Let’s say we want the expressive power of an iOS or Android style <code>Switch</code>
+component. Transferring this concept to the web in a <code>form</code>-based way, I would
+choose to create some HTML around a <code>checkbox</code> input to accomplish this because
+the interface I would expect for a <code>switch</code> is identical to that of a <code>switch</code>.</p><ul><li><code>onChange</code> event handlers</li><li><code>checked</code> state (only slightly different semantics from <code>on|off</code>)</li><li><code>name</code></li><li><code>id</code></li><li><code>label</code></li><li>et cetera</li></ul><p>First, let’s take a quick look at what consuming this component looks like. What
+I would would want as the application developer would look something like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>form</span> <span style=color:#a6e22e>action</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/api/endpoint&#34;</span> <span style=color:#a6e22e>method</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;POST&#34;</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>Switch</span> <span style=color:#a6e22e>label</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Send robots to hug Dustan?&#34;</span> <span style=color:#a6e22e>checked</span><span style=color:#f92672>=</span><span style=color:#e6db74>{true}</span> /&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>button</span>&gt;Submit&lt;/<span style=color:#f92672>button</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>form</span>&gt;
+</span></span></code></pre></div><p>Very clear and very expressive, no? Now let’s implement this with React.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * An iOS or Android style Switch element.
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * The interface is that of a standard input[type=&#34;checkbox&#34;] control, with the
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * addition of a `label` property.
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * 
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * Pseudo-ASCII-art UI:
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *   On:  (•|_)
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *   Off: (_|•)
+</span></span></span><span style=display:flex><span><span style=color:#75715e> */</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Switch</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>Component</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>getInitialState</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> {<span style=color:#a6e22e>id</span> <span style=color:#f92672>:</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>id</span> <span style=color:#f92672>||</span> <span style=color:#a6e22e>UUID</span>()};
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>render</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> {<span style=color:#a6e22e>label</span>, ...<span style=color:#a6e22e>props</span>} <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> (
+</span></span><span style=display:flex><span>      &lt;<span style=color:#f92672>label</span> <span style=color:#a6e22e>htmlFor</span><span style=color:#f92672>=</span>{<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>id</span>} <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Switch&#34;</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Switch-label&#34;</span>&gt;{<span style=color:#a6e22e>label</span>}&lt;/<span style=color:#f92672>span</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Switch-ui&#34;</span>&gt;
+</span></span><span style=display:flex><span>          &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>ref</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;checkbox&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;checkbox&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Switch-input&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span>{<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>id</span>}
+</span></span><span style=display:flex><span>            {<span style=color:#a6e22e>...props</span>} /&gt;
+</span></span><span style=display:flex><span>          &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;switch__toggle&#34;</span>&gt;&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>        &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:#f92672>label</span>&gt;
+</span></span><span style=display:flex><span>    );
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Speaking only of the JSX part, part of the beauty is that it creates an
+automatic cognitive context switch due to the clear, visual structural change.
+There is a tight coupling between your behavior and your view. React components
+embrace this innate fact and marry them together in a sane and maintainable way;
+they co-locate these related concerns.</p><p><strong>JSX is the affordance for your brain to automatically context switch.</strong> This
+switch from behavior to view requires no additional effort on your part.</p><h2 id=what-about-my-other-concerns>What about my other concerns?</h2><p>Granted, this leaves a few pieces of your components concerns out of the
+picture. Namely, style and data fetching. The React team isn’t prescriptive
+about how <em>you</em> choose to solve these problems.</p><p>There are a number of CSS in JavaScript approaches (more blasphemy!) such as
+<a href=https://github.com/chenglou/rcss>RCSS</a> and
+<a href=https://github.com/js-next/react-style>react-style</a>, and
+<a href=https://github.com/reactjs/react-future/blob/master/04%20-%20Layout/04%20-%20Inline%20Styles.md>react-future/layout</a>.
+I would highly recommend Christopher Chedou’s slides on the subject:
+<a href=https://speakerdeck.com/vjeux/react-css-in-js>react-css-in-js</a></p><p>For data fetching, GraphQL was just announced at React Conf and it is seriously
+blowing my mind. Watch the video <a href="https://www.youtube.com/watch?v=9sc8Pyc51uU">Data fetching for React applications at
+Facebook</a> and read the Q&A on <a href=https://gist.github.com/wincent/598fa75e22bdfa44cf47>this
+gist</a> by one of
+the designers of the system: Nick Schrock.</p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8"></div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>

@@ -1,171 +1,82 @@
-<!DOCTYPE html>
- <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title></title><link rel="shortcut icon"/><link href="//fonts.googleapis.com/css?family=Lato:100,400,700,900" rel="stylesheet" type="text/css"/><style id="typography.js">/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
-
-html {
-  box-sizing: border-box;
-  font-size: 125%;
-  line-height: 1.5em;
-  overflow-y: scroll;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  color: hsl(0,0%,20%);
-  font-family: Lora;
-  font-weight: 400;
-  word-wrap: break-word;
-}
-
-/* Make image responsive by default */
-img {
-  max-width: 100%;
-}
-
-h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dl,dd,p,figure,pre,table,fieldset,blockquote,form,noscript,iframe,img,hr {
-margin: 0;
-margin-bottom: 1.5rem;
-padding: 0;
-}
-
-blockquote {
-margin: 1.5rem 3.75rem;
-}
-
-b,strong {
-font-weight: 700
-}
-
-hr {
-background: hsl(0,0%,80%);
-border: none;
-height: 1px;
-margin-bottom: calc(1.5rem - 1px);
-}
-
-ol,ul {
-list-style-position: outside;
-margin-left: 1.5rem;
-}
-
-ul li,ol li {
-padding-left: 0;
-}
-
-code,kbd,pre,samp {
-font-size: 0.85rem;
-line-height: 1.5rem;
-}
-
-table {
-font-size: 1rem;
-line-height: 2.25rem;
-width: 100%;
-}
-
-thead {
-text-align: left;
-}
-
-h1,h2,h3,h4,h5,h6 {
-color: hsl(0,0%,25%);
-font-family: Open Sans;
-font-weight: 900;
-}
-
-h1 {
-font-size: 4.23607rem;
-line-height: 4.5rem;
-}
-
-h2 {
-font-size: 2.61803rem;
-line-height: 3rem;
-}
-
-h3 {
-font-size: 1.61803rem;
-line-height: 2.25rem;
-}
-
-h4 {
-font-size: 1.37824rem;
-line-height: 2.25rem;
-}
-
-h5 {
-font-size: 1.17398rem;
-line-height: 1.5rem;
-}
-
-h6 {
-font-size: 1rem;
-line-height: 1.5rem;
-}
-
-
-</style><link rel="stylesheet" href="/styles.css"/></head><body class="landing-page"><div id="react-mount"><div style="max-width:36rem;margin-left:auto;margin-right:auto;padding:3rem 0.75rem;" data-reactid=".1zb7cgmpv5s" data-react-checksum="1815678181"><h3 data-reactid=".1zb7cgmpv5s.0:0"><a style="text-decoration:none;color:inherit;" class="" href="/" data-reactid=".1zb7cgmpv5s.0:0.0">iamdustan.com</a></h3><div class="markdown" data-reactid=".1zb7cgmpv5s.0:1"><h1 data-reactid=".1zb7cgmpv5s.0:1.0">Exploring CSS ASTs</h1><em style="display:block;margin-bottom:3rem;" data-reactid=".1zb7cgmpv5s.0:1.1"><span data-reactid=".1zb7cgmpv5s.0:1.1.0">Posted </span><span data-reactid=".1zb7cgmpv5s.0:1.1.1">March 1, 2016</span></em><div data-reactid=".1zb7cgmpv5s.0:1.2"><p>My greatest programming joys over the past few months have been whenever I get
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Exploring CSS ASTs - Dustan Kasten</title><meta name=description content="My greatest programming joys over the past few months have been whenever I get the opportunity to programmatically manipulate the code itself. Ever since transforming a number of projects containing 100s of modules from AMD to Common.js, it&rsquo;s been stewing in my mind.
+Though that was JavaScript. Let’s consider CSS for a bit. Professional experience and the wisdom of others has shown me repeatedly that CSS as a language has many footguns."><meta name=author content><link href=https://unpkg.com/@master/normal.css rel=stylesheet><script src=https://unpkg.com/@master/style@1.5.0></script>
+<script src=https://unpkg.com/@master/styles@1.13.0></script>
+<script src=https://unpkg.com/master-styles-group></script>
+<script src=https://unpkg.com/themes.js></script>
+<script>window.themes=window.themes||new window.Themes</script></head><body class="bg:fade-84@dark font:fade-16@dark"><nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000"><div class="h:full
+w:full
+max-w:1200
+mx:auto
+px:32
+d:flex
+align-items:center"><div><a href=/ class="mr-3 font:extralight">Dustan Kasten</a></div><div class=ml:auto></div></div></nav><div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word"><div class="max-w:700 w:full box:content-box"><article class="box:border-box pt:32"><header class=mb:32><div class="font:40 font:extrabold">Exploring CSS ASTs</div><div class="mt:16 f:fade-60"><time>Apr 8, 2015</time></div></header><div class="_:where(a):hover{text-decoration-color:fade}
+_:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+_:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+_:where(code){font:90%;_v:middle}
+_:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+_:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+_:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+_:where(h1){font:40;_font:extrabold}
+_:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+_:where(h1,h2,h3,h4,h5,h6){mt:2em}
+_:where(h2){mb:1em;_font:32}
+_:where(h3){font:24}
+_:where(h4){font:20}
+_:where(h5){font:16}
+_:where(h6){font:14}
+_:where(li)::marker{font:fade-44;_font:fade-68@dark}
+_:where(li){pl:.375em}
+_:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+_:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+_:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+>:first-child{mt:0!}
+_:where(pre){p:20;_r:8;_overflow:auto}
+_:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+_:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+_:where(table){width:full;_border-spacing:0}
+_:where(td){v:baseline}
+_:where(td,th):first-child{pl:0}
+_:where(td,th):last-child{pr:0}
+_:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+_:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+_:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+_:where(ul){list-style-type:disc}
+_:where(ul,ol,blockquote){pl:1.5em}
+_:where(video,img){max-width:full}
+_:where(a,mark){text-underline-offset:3}"><p>My greatest programming joys over the past few months have been whenever I get
 the opportunity to programmatically manipulate the code itself. Ever since
-transforming a number of projects containing 100s of modules from <a href="http://skookum.com/blog/converting-a-project-from-amd-to-cjs-with-recast/">AMD to
+transforming a number of projects containing 100s of modules from <a href=http://skookum.com/blog/converting-a-project-from-amd-to-cjs-with-recast/>AMD to
 Common.js</a>,
-it’s been stewing in my mind.</p>
-<p>Though that was JavaScript. Let’s consider CSS for a bit. Professional
-experience and the <a href="https://speakerdeck.com/vjeux/react-css-in-js">wisdom</a> of
-<a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">others</a>
-has shown me repeatedly that CSS as a language has many <a href="https://en.bem.info/method/#origins-of-the-bem-methodology">footguns</a>.
+it&rsquo;s been stewing in my mind.</p><p>Though that was JavaScript. Let’s consider CSS for a bit. Professional
+experience and the <a href=https://speakerdeck.com/vjeux/react-css-in-js>wisdom</a> of
+<a href=http://nicolasgallagher.com/about-html-semantics-front-end-architecture/>others</a>
+has shown me repeatedly that CSS as a language has many <a href=https://en.bem.info/method/#origins-of-the-bem-methodology>footguns</a>.
 The standard expressions—such as mixins and nesting—that preprocessors bring to
 the table don’t protect me from the footguns. In fact they bring more. They
 don’t assist in composing and marrying the concerns of a concrete UI component
 together, or provide the internal data structure and transformation pipeline to
-the developer as a first class citizen.</p>
-<p><a href="https://github.com/reworkcss/rework">ReworkCSS</a>, though, is a bit different
+the developer as a first class citizen.</p><p><a href=https://github.com/reworkcss/rework>ReworkCSS</a>, though, is a bit different
 than a typical CSS preprocessor. It’s a tool for sending CSS through a pipeline
 and doing anything you can imagine with it. Transform and extend the language,
 track internal usage metrics of properties and selectors, or add custom linting.
 It’s not an opinionated css-like language that outputs CSS. It’s a preprocessors
-foundation. And it’s fast.</p>
-<p><a href="http://www.myth.io/">Myth</a>, <a href="https://github.com/suitcss/preprocessor">SuitCSS</a>,
-<a href="https://github.com/tj/styl">Styl</a>, and <a href="https://github.com/topcoat/resin">Resin</a>
-(CSS preprocessor for <a href="http://topcoat.io">Topcoat.io</a> are built using Rework.</p>
-<p>For these reasons rework is my tool of choice when working in the CSS domain.
-You have the full power of your programming abilities and ideas at your disposal.</p>
-<p>Rework parses a string of CSS and returns to you an abstract syntax tree (AST).
+foundation. And it’s fast.</p><p><a href=http://www.myth.io/>Myth</a>, <a href=https://github.com/suitcss/preprocessor>SuitCSS</a>,
+<a href=https://github.com/tj/styl>Styl</a>, and <a href=https://github.com/topcoat/resin>Resin</a>
+(CSS preprocessor for <a href=http://topcoat.io>Topcoat.io</a> are built using Rework.</p><p>For these reasons rework is my tool of choice when working in the CSS domain.
+You have the full power of your programming abilities and ideas at your disposal.</p><p>Rework parses a string of CSS and returns to you an abstract syntax tree (AST).
 An AST is a tree structure that represents the source file. Simplistically, you
 can think of an AST for any language as a defined object containing child array
-and objects.</p>
-<p>Iterating over arrays and objects and manipulating them is more or less what we
+and objects.</p><p>Iterating over arrays and objects and manipulating them is more or less what we
 do as developers. To get started manipulating one of these trees it is important
 to understand it and know what to look for in your filter and reducing
-functions.</p>
-<p>It is in this spirit that I forked <a href="https://twitter.com/fkling42">@fkling42</a>’s
-wonderful <a href="http://felix-kling.de/esprima_ast_explorer/">Esprima AST Explorer</a>
+functions.</p><p>It is in this spirit that I forked <a href=https://twitter.com/fkling42>@fkling42</a>’s
+wonderful <a href=http://felix-kling.de/esprima_ast_explorer/>Esprima AST Explorer</a>
 tool to use ReworkCSS. The forked project is available here:
-<a href="http://iamdustan.com/reworkcss_ast_explorer/">http://iamdustan.com/reworkcss_ast_explorer/</a>
+<a href=http://iamdustan.com/reworkcss_ast_explorer/>http://iamdustan.com/reworkcss_ast_explorer/</a>
 and on github:
-<a href="https://github.com/iamdustan/reworkcss_ast_explorer">https://github.com/iamdustan/reworkcss_ast_explorer</a>.</p>
-<p>In the left pane you can write any valid CSS and in the right pane you can
+<a href=https://github.com/iamdustan/reworkcss_ast_explorer>https://github.com/iamdustan/reworkcss_ast_explorer</a>.</p><p>In the left pane you can write any valid CSS and in the right pane you can
 explore the abstract syntax tree that rework provides you. Please note that
 there are a few bugs yet to work out. Namely, the original project has cross-
-pane contextual highlighting.</p>
-<p>Open up the CSS AST Explorer in your browser while writing a custom transformer
-to extend and level up your projects front end code.</p>
-<p>Some ideas for rework plugins to get you started:</p>
-<ul>
-<li>Generate a media-query free stylesheet for oldIE: <a href="https://github.com/iamdustan/queryless">iamdustan/queryless</a></li>
-<li>Validate CSS naming conventions: <a href="https://github.com/suitcss/rework-suit-conformance">suitcss/rework-suit-conformance</a></li>
-<li>Polyfill future w3c specs</li>
-<li>Fail CI suite on overly specific selectors</li>
-</ul>
-<p>My hope is that tools like these help you think about software development and
-UI development in differently.</p>
-<p><strong>For more inspiration</strong>:</p>
-<ul>
-<li>“Custom CSS Preprocessing” by Nicolas Gallagher. <a href="http://nicolasgallagher.com/custom-css-preprocessing/">http://nicolasgallagher.com/custom-css-preprocessing/</a></li>
-<li>“Unlocking the structure of your React applications with the AST” by Gurdas Nijor. <a href="https://www.youtube.com/watch?v=OZGgVxFxSIs&amp;list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr&amp;index=4">https://www.youtube.com/watch?v=OZGgVxFxSIs&amp;list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr&amp;index=4</a></li>
-<li>“Scalable web apps: the complexity issue” by Ariya Hidayat.  <a href="http://ariya.ofilabs.com/2012/01/scalable-web-apps-the-complexity-issue.html">http://ariya.ofilabs.com/2012/01/scalable-web-apps-the-complexity-issue.html</a></li>
-<li>“Language Tools for Reducing Mistakes” by Ariya Hidayat.  <a href="http://ariya.ofilabs.com/2012/11/language-tools-for-reducing-mistakes.html">http://ariya.ofilabs.com/2012/11/language-tools-for-reducing-mistakes.html</a></li>
-<li><a href="https://github.com/reactjs/react-docgen">react-docgen</a> and <a href="https://github.com/Skookum/react-autodoc">react-autodoc</a></li>
-</ul>
-</div><hr style="margin-bottom:3rem;" data-reactid=".1zb7cgmpv5s.0:1.3"/><noscript data-reactid=".1zb7cgmpv5s.0:1.4"></noscript><div data-reactid=".1zb7cgmpv5s.0:1.5"><img src="/iamdustan.jpg" style="border:1px solid #fff;box-shadow:0 0 2px rgba(0, 0, 0, 0.125);float:left;transform:rotate(90deg);margin-top:0.5rem;width:3.75rem;" data-reactid=".1zb7cgmpv5s.0:1.5.0"/><p style="margin-left:3.375rem;" data-reactid=".1zb7cgmpv5s.0:1.5.1"><span data-reactid=".1zb7cgmpv5s.0:1.5.1.0">These words brought to you by </span><strong data-reactid=".1zb7cgmpv5s.0:1.5.1.1">Dustan Kasten</strong><span data-reactid=".1zb7cgmpv5s.0:1.5.1.2">. A friendly, bearded, husband, father, and user interface engineer living in Charlotte, NC. Considers himself quite partial to React.js these days. </span><a href="https://twitter.com/iamdustan" data-reactid=".1zb7cgmpv5s.0:1.5.1.3">Find @iamdustan on Twitter</a></p></div></div><footer style="color:#999;font-size:0.75rem;text-align:right;" data-reactid=".1zb7cgmpv5s.0:2"><span data-reactid=".1zb7cgmpv5s.0:2.0"><span data-reactid=".1zb7cgmpv5s.0:2.0.0">Content licensed under </span><a href="http://creativecommons.org/licenses/by-nc/4.0/" data-reactid=".1zb7cgmpv5s.0:2.0.1">CC BY-NC 4.0</a></span></footer><span style="display:block;clear:both;" data-reactid=".1zb7cgmpv5s.1"> </span></div></div><script src="/bundle.js"></script><script></script></body></html>
+pane contextual highlighting.</p><p>Open up the CSS AST Explorer in your browser while writing a custom transformer
+to extend and level up your projects front end code.</p><p>Some ideas for rework plugins to get you started:</p><ul><li>Generate a media-query free stylesheet for oldIE: <a href=https://github.com/iamdustan/queryless>iamdustan/queryless</a></li><li>Validate CSS naming conventions: <a href=https://github.com/suitcss/rework-suit-conformance>suitcss/rework-suit-conformance</a></li><li>Polyfill future w3c specs</li><li>Fail CI suite on overly specific selectors</li></ul><p>My hope is that tools like these help you think about software development and
+UI development in differently.</p><p><strong>For more inspiration</strong>:</p><ul><li>“Custom CSS Preprocessing” by Nicolas Gallagher. <a href=http://nicolasgallagher.com/custom-css-preprocessing/>http://nicolasgallagher.com/custom-css-preprocessing/</a></li><li>“Unlocking the structure of your React applications with the AST” by Gurdas Nijor. <a href="https://www.youtube.com/watch?v=OZGgVxFxSIs&list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr&index=4">https://www.youtube.com/watch?v=OZGgVxFxSIs&list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr&index=4</a></li><li>“Scalable web apps: the complexity issue” by Ariya Hidayat. <a href=http://ariya.ofilabs.com/2012/01/scalable-web-apps-the-complexity-issue.html>http://ariya.ofilabs.com/2012/01/scalable-web-apps-the-complexity-issue.html</a></li><li>“Language Tools for Reducing Mistakes” by Ariya Hidayat. <a href=http://ariya.ofilabs.com/2012/11/language-tools-for-reducing-mistakes.html>http://ariya.ofilabs.com/2012/11/language-tools-for-reducing-mistakes.html</a></li><li><a href=https://github.com/reactjs/react-docgen>react-docgen</a> and <a href=https://github.com/Skookum/react-autodoc>react-autodoc</a></li></ul></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8"></div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>

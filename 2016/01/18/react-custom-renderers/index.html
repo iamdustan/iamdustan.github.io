@@ -1,141 +1,47 @@
-<!DOCTYPE html>
- <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title></title><link rel="shortcut icon"/><link href="//fonts.googleapis.com/css?family=Lato:100,400,700,900" rel="stylesheet" type="text/css"/><style id="typography.js">/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
-
-html {
-  box-sizing: border-box;
-  font-size: 125%;
-  line-height: 1.5em;
-  overflow-y: scroll;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  color: hsl(0,0%,20%);
-  font-family: Lora;
-  font-weight: 400;
-  word-wrap: break-word;
-}
-
-/* Make image responsive by default */
-img {
-  max-width: 100%;
-}
-
-h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dl,dd,p,figure,pre,table,fieldset,blockquote,form,noscript,iframe,img,hr {
-margin: 0;
-margin-bottom: 1.5rem;
-padding: 0;
-}
-
-blockquote {
-margin: 1.5rem 3.75rem;
-}
-
-b,strong {
-font-weight: 700
-}
-
-hr {
-background: hsl(0,0%,80%);
-border: none;
-height: 1px;
-margin-bottom: calc(1.5rem - 1px);
-}
-
-ol,ul {
-list-style-position: outside;
-margin-left: 1.5rem;
-}
-
-ul li,ol li {
-padding-left: 0;
-}
-
-code,kbd,pre,samp {
-font-size: 0.85rem;
-line-height: 1.5rem;
-}
-
-table {
-font-size: 1rem;
-line-height: 2.25rem;
-width: 100%;
-}
-
-thead {
-text-align: left;
-}
-
-h1,h2,h3,h4,h5,h6 {
-color: hsl(0,0%,25%);
-font-family: Open Sans;
-font-weight: 900;
-}
-
-h1 {
-font-size: 4.23607rem;
-line-height: 4.5rem;
-}
-
-h2 {
-font-size: 2.61803rem;
-line-height: 3rem;
-}
-
-h3 {
-font-size: 1.61803rem;
-line-height: 2.25rem;
-}
-
-h4 {
-font-size: 1.37824rem;
-line-height: 2.25rem;
-}
-
-h5 {
-font-size: 1.17398rem;
-line-height: 1.5rem;
-}
-
-h6 {
-font-size: 1rem;
-line-height: 1.5rem;
-}
-
-
-</style><link rel="stylesheet" href="/styles.css"/></head><body class="landing-page"><div id="react-mount"><div style="max-width:36rem;margin-left:auto;margin-right:auto;padding:3rem 0.75rem;" data-reactid=".fqov7c49a8" data-react-checksum="273374796"><h3 data-reactid=".fqov7c49a8.0:0"><a style="text-decoration:none;color:inherit;" class="" href="/" data-reactid=".fqov7c49a8.0:0.0">iamdustan.com</a></h3><div class="markdown" data-reactid=".fqov7c49a8.0:1"><h1 data-reactid=".fqov7c49a8.0:1.0">React Custom Renderers</h1><em style="display:block;margin-bottom:3rem;" data-reactid=".fqov7c49a8.0:1.1"><span data-reactid=".fqov7c49a8.0:1.1.0">Posted </span><span data-reactid=".fqov7c49a8.0:1.1.1">March 1, 2016</span></em><div data-reactid=".fqov7c49a8.0:1.2"><p>You’re considering building a custom renderer for React and are wondering where to start and what to do? Welcome (to the land of dragons)! Just kidding, it’s not that bad—just undocumented and not officially supported. ¯\_(ツ)_/¯</p>
-<p>This article is intended to be a high level view of the developer experience a renderer should aim to provide based on my experience with React, writing a renderer, and exploring other custom renderers. Note that this is <em>not</em> a guide on how to write a renderer.</p>
-<p>tldr;</p>
-<ul>
-<li>React devs are Web devs. Design your APIs accordingly.</li>
-<li>Hide imperative APIs behind declarative ones. This is what makes React, React.</li>
-<li>Progressive disclosure. Use invariants and warnings to educate consumers <em>while they use it</em>.
-Interop with existing tools such as live reload, React DevTools, and module bundlers.</li>
-<li>Bonus: Share your creations and learnings.</li>
-</ul>
-<h2>React Developers are Web Developers</h2>
-<p>The majority of React Developers are Web Developers first. At the very least the React community is rooted in the web platform. A renderer should implement web-centric APIs on top of the target platform where it makes sense.</p>
-<p>For example, you should strongly consider providing CSS Layout for positioning and styling.</p>
-<p>If there are form-style input controls they should follow DOM and React controlled vs uncontrolled semantics. Standard form controls such as tab focus, return key, and other expected navigation controls should “just work”.</p>
-<p>“Learn once, write anywhere” should be your guiding principle when considering the public API of your renderer.</p>
-<h2>Hide imperative APIs behind declarative ones</h2>
-<p>The public API of components is far more important than the specifics of their implementation. It is the Renderer’s responsibility to take the weight of the platform and simplify it. React does this repeatedly. It takes a stateful world like the DOM and presents you an interface that allows you to simply describe what the DOM should be.</p>
-<p>The platform APIs should be accessible as an escape hatch when required. As an example, in the browser environment we escape out of the declarative React authoring model to imperatively manage focus.</p>
-<p>As a guideline, a sure sign that there is a better abstraction for you to provide is that your renderer requires the consumer to write lifecycle methods to interact with the target environment to accomplish simple, declarative tasks.</p>
-<h2>Progressive Disclosure and Education</h2>
-<p>Help the developer along. Use warnings and invariants to provide educational messages as to why they are receiving that message and what can be done to rectify it.</p>
-<p>React does this when attempting to render a <tr /> directly into a <table />. React Hardware is taking the pin today from the board and verifying that an acceptable mode is being used.</p>
-<p>On React Native you are likely familiar with the Red and Yellowboxes (in your face variations on the former examples) which are incredibly helpful to use the project without having to query documentation endlessly.</p>
-<p>Development integration always trumps walls of documentation. Provide the knowledge needed when it is needed.</p>
-<h2>Interop with existing tools</h2>
-<p>The React ecosystem has flourished a bevy of tools. A handful of this could be considered core or foundational. It should be your aim to interop with these.</p>
-<p>Hot reloading has been transformative to many UIEs on the web and now with React Native, too. The React team supports Flow type definitions for static analysis regarding program correctness, safety, and documentation. The official React DevTools are a nice addition (not to mention the benefits of running and debugging code in a browser context). Lastly common module bundlers such as Webpack, Browserify, and Rollup should also be able to consume and build for your platform (if a simple <code>node index.js</code> does not suffice).</p>
-<h2>Share</h2>
-<p>As with anything in our software community, sharing is an enabler. React’s public API is quite stable and predictable, but the internals are not quite so clear. The use cases and patterns you need to implement your renderer will be extremely useful to the React team as they move towards having a better story for custom renderers. Additional parts of the API are also still being thought up and iterated upon such as a DevTools API.</p>
-<p>Be a giant. Share what you learn.</p>
-<hr>
-<p>Thank you to <a href="https://twitter.com/zpao">Paul O’Shannessy</a> for reviewing this article.</p>
-</div><hr style="margin-bottom:3rem;" data-reactid=".fqov7c49a8.0:1.3"/><noscript data-reactid=".fqov7c49a8.0:1.4"></noscript><div data-reactid=".fqov7c49a8.0:1.5"><img src="/iamdustan.jpg" style="border:1px solid #fff;box-shadow:0 0 2px rgba(0, 0, 0, 0.125);float:left;transform:rotate(90deg);margin-top:0.5rem;width:3.75rem;" data-reactid=".fqov7c49a8.0:1.5.0"/><p style="margin-left:3.375rem;" data-reactid=".fqov7c49a8.0:1.5.1"><span data-reactid=".fqov7c49a8.0:1.5.1.0">These words brought to you by </span><strong data-reactid=".fqov7c49a8.0:1.5.1.1">Dustan Kasten</strong><span data-reactid=".fqov7c49a8.0:1.5.1.2">. A friendly, bearded, husband, father, and user interface engineer living in Charlotte, NC. Considers himself quite partial to React.js these days. </span><a href="https://twitter.com/iamdustan" data-reactid=".fqov7c49a8.0:1.5.1.3">Find @iamdustan on Twitter</a></p></div></div><footer style="color:#999;font-size:0.75rem;text-align:right;" data-reactid=".fqov7c49a8.0:2"><span data-reactid=".fqov7c49a8.0:2.0"><span data-reactid=".fqov7c49a8.0:2.0.0">Content licensed under </span><a href="http://creativecommons.org/licenses/by-nc/4.0/" data-reactid=".fqov7c49a8.0:2.0.1">CC BY-NC 4.0</a></span></footer><span style="display:block;clear:both;" data-reactid=".fqov7c49a8.1"> </span></div></div><script src="/bundle.js"></script><script></script></body></html>
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>React Custom Renderers - Dustan Kasten</title><meta name=description content="You’re considering building a custom renderer for React and are wondering where to start and what to do? Welcome (to the land of dragons)! Just kidding, it’s not that bad—just undocumented and not officially supported. ¯\_(ツ)_/¯
+This article is intended to be a high level view of the developer experience a renderer should aim to provide based on my experience with React, writing a renderer, and exploring other custom renderers. Note that this is not a guide on how to write a renderer."><meta name=author content><link href=https://unpkg.com/@master/normal.css rel=stylesheet><script src=https://unpkg.com/@master/style@1.5.0></script>
+<script src=https://unpkg.com/@master/styles@1.13.0></script>
+<script src=https://unpkg.com/master-styles-group></script>
+<script src=https://unpkg.com/themes.js></script>
+<script>window.themes=window.themes||new window.Themes</script></head><body class="bg:fade-84@dark font:fade-16@dark"><nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000"><div class="h:full
+w:full
+max-w:1200
+mx:auto
+px:32
+d:flex
+align-items:center"><div><a href=/ class="mr-3 font:extralight">Dustan Kasten</a></div><div class=ml:auto></div></div></nav><div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word"><div class="max-w:700 w:full box:content-box"><article class="box:border-box pt:32"><header class=mb:32><div class="font:40 font:extrabold">React Custom Renderers</div><div class="mt:16 f:fade-60"><time>Jan 18, 2016</time></div></header><div class="_:where(a):hover{text-decoration-color:fade}
+_:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+_:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+_:where(code){font:90%;_v:middle}
+_:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+_:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+_:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+_:where(h1){font:40;_font:extrabold}
+_:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+_:where(h1,h2,h3,h4,h5,h6){mt:2em}
+_:where(h2){mb:1em;_font:32}
+_:where(h3){font:24}
+_:where(h4){font:20}
+_:where(h5){font:16}
+_:where(h6){font:14}
+_:where(li)::marker{font:fade-44;_font:fade-68@dark}
+_:where(li){pl:.375em}
+_:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+_:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+_:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+>:first-child{mt:0!}
+_:where(pre){p:20;_r:8;_overflow:auto}
+_:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+_:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+_:where(table){width:full;_border-spacing:0}
+_:where(td){v:baseline}
+_:where(td,th):first-child{pl:0}
+_:where(td,th):last-child{pr:0}
+_:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+_:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+_:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+_:where(ul){list-style-type:disc}
+_:where(ul,ol,blockquote){pl:1.5em}
+_:where(video,img){max-width:full}
+_:where(a,mark){text-underline-offset:3}"><p>You’re considering building a custom renderer for React and are wondering where to start and what to do? Welcome (to the land of dragons)! Just kidding, it’s not that bad—just undocumented and not officially supported. ¯\_(ツ)_/¯</p><p>This article is intended to be a high level view of the developer experience a renderer should aim to provide based on my experience with React, writing a renderer, and exploring other custom renderers. Note that this is <em>not</em> a guide on how to write a renderer.</p><p>tldr;</p><ul><li>React devs are Web devs. Design your APIs accordingly.</li><li>Hide imperative APIs behind declarative ones. This is what makes React, React.</li><li>Progressive disclosure. Use invariants and warnings to educate consumers <em>while they use it</em>.
+Interop with existing tools such as live reload, React DevTools, and module bundlers.</li><li>Bonus: Share your creations and learnings.</li></ul><h2 id=react-developers-are-web-developers>React Developers are Web Developers</h2><p>The majority of React Developers are Web Developers first. At the very least the React community is rooted in the web platform. A renderer should implement web-centric APIs on top of the target platform where it makes sense.</p><p>For example, you should strongly consider providing CSS Layout for positioning and styling.</p><p>If there are form-style input controls they should follow DOM and React controlled vs uncontrolled semantics. Standard form controls such as tab focus, return key, and other expected navigation controls should “just work”.</p><p>“Learn once, write anywhere” should be your guiding principle when considering the public API of your renderer.</p><h2 id=hide-imperative-apis-behind-declarative-ones>Hide imperative APIs behind declarative ones</h2><p>The public API of components is far more important than the specifics of their implementation. It is the Renderer’s responsibility to take the weight of the platform and simplify it. React does this repeatedly. It takes a stateful world like the DOM and presents you an interface that allows you to simply describe what the DOM should be.</p><p>The platform APIs should be accessible as an escape hatch when required. As an example, in the browser environment we escape out of the declarative React authoring model to imperatively manage focus.</p><p>As a guideline, a sure sign that there is a better abstraction for you to provide is that your renderer requires the consumer to write lifecycle methods to interact with the target environment to accomplish simple, declarative tasks.</p><h2 id=progressive-disclosure-and-education>Progressive Disclosure and Education</h2><p>Help the developer along. Use warnings and invariants to provide educational messages as to why they are receiving that message and what can be done to rectify it.</p><p>React does this when attempting to render a directly into a . React Hardware is taking the pin today from the board and verifying that an acceptable mode is being used.</p><p>On React Native you are likely familiar with the Red and Yellowboxes (in your face variations on the former examples) which are incredibly helpful to use the project without having to query documentation endlessly.</p><p>Development integration always trumps walls of documentation. Provide the knowledge needed when it is needed.</p><h2 id=interop-with-existing-tools>Interop with existing tools</h2><p>The React ecosystem has flourished a bevy of tools. A handful of this could be considered core or foundational. It should be your aim to interop with these.</p><p>Hot reloading has been transformative to many UIEs on the web and now with React Native, too. The React team supports Flow type definitions for static analysis regarding program correctness, safety, and documentation. The official React DevTools are a nice addition (not to mention the benefits of running and debugging code in a browser context). Lastly common module bundlers such as Webpack, Browserify, and Rollup should also be able to consume and build for your platform (if a simple <code>node index.js</code> does not suffice).</p><h2 id=share>Share</h2><p>As with anything in our software community, sharing is an enabler. React’s public API is quite stable and predictable, but the internals are not quite so clear. The use cases and patterns you need to implement your renderer will be extremely useful to the React team as they move towards having a better story for custom renderers. Additional parts of the API are also still being thought up and iterated upon such as a DevTools API.</p><p>Be a giant. Share what you learn.</p><hr><p>Thank you to <a href=https://twitter.com/zpao>Paul O’Shannessy</a> for reviewing this article.</p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8"></div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>
