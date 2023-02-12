@@ -1,3 +1,10 @@
+baseURL = 'https://iamdustan.com/'
 blogTitle = "iamdustan.com"
+title = 'Dustan Kasten'
 authorName = "Dustan Kasten"
 linkPrefix = "/"
+languageCode = 'en-us'
+theme = 'holy'
+[permalinks]
+  posts = '/:year/:month/:day/:title/'
+  projects = '/:title/'
