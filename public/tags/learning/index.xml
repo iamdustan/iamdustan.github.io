@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on Dustan Kasten</title>
+    <link>http://iamdustan.com/tags/learning/</link>
+    <description>Recent content in learning on Dustan Kasten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Apr 2015 09:00:00 -0600</lastBuildDate><atom:link href="http://iamdustan.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to choose a second language</title>
+      <link>http://iamdustan.com/2015/04/17/how-to-choose-a-second-language/</link>
+      <pubDate>Fri, 17 Apr 2015 09:00:00 -0600</pubDate>
+      
+      <guid>http://iamdustan.com/2015/04/17/how-to-choose-a-second-language/</guid>
+      <description>So you’ve been programming for a while now and you want to explore what other languages are there. How do you choose?
+Do you choose based on how you think you might get a job? Or do you choose where all the “excitement” is?
+My advice? Find something that will change the way you think about programming.
+Most likely you’ve been writing in some form of object-oriented language. That’s great. It’s what the vast majority of professional software developers author in.</description>
+    </item>
+    
+  </channel>
+</rss>

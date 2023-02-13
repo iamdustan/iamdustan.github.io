@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="d:flex flex:col">
+    {{- partial "prose.html" . -}}
+
+    <h2 class="my:1em">404</h2>
+
+    <a href="{{ "" | relURL }}">Go Home</a>
+</div>
+{{ end }}
+
+

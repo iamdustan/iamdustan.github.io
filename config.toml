@@ -4,7 +4,23 @@ title = 'Dustan Kasten'
 authorName = "Dustan Kasten"
 linkPrefix = "/"
 languageCode = 'en-us'
-theme = 'holy'
+#  theme = 'holy'
 [permalinks]
   posts = '/:year/:month/:day/:title/'
   projects = '/:title/'
+[menu]
+[[menu.main]]
+  identifier = 'blog'
+  name = 'blog'
+  title = 'Entries'
+  url = '/'
+[[menu.main]]
+  identifier = 'projects'
+  name = 'projects'
+  title = 'projects'
+  url = '/projects/'
+[[menu.main]]
+  identifier = 'now'
+  name = 'now'
+  title = 'now'
+  url = '/now/'

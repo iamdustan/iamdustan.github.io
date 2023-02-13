@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>reinstall: a better `daggumnpm` - Dustan Kasten</title>
+
+    
+    
+    <meta name="description" content="daggumnpm, while fun, had a few rough edges. My workflow often involves running daggumnpm in a tmux session and working on something else while npm does it’s thing. When everything works this is great because I hear the friendly “Greetings, Dustan Kasten&hellip;” message when the install completes. However, when npm install fails I completely forget about that process for entirely too long.
+Whilst this could still be done with a single line bash alias, I’ve opted to use a more verbose implementation in the following little function reinstall." />
+    <meta name="author" content="" />
+    
+
+    <link href="https://unpkg.com/@master/normal.css" rel="stylesheet">
+    <script src="https://unpkg.com/@master/style@1.5.0"></script>
+    <script src="https://unpkg.com/@master/styles@1.13.0"></script>
+    <script src="https://unpkg.com/master-styles-group"></script>
+    <script src="https://unpkg.com/themes.js"></script>
+    <script>window.themes = window.themes || new window.Themes()</script></head>
+
+<body class="bg:fade-84@dark font:fade-16@dark">
+    <nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000">
+    <div class="
+        h:full
+        w:full
+        max-w:1200
+        mx:auto
+        px:32
+        d:flex
+        align-items:center
+    ">
+        <div>
+            <a href="/" class="mr-3 font:extralight">
+              
+              Dustan Kasten
+              
+            </a>
+        </div>
+
+        <div class="ml:auto">
+            
+            
+            
+        </div>
+    </div>
+</nav>
+
+<div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word">
+        <div class="max-w:700 w:full box:content-box">
+<article class="box:border-box pt:32">
+    <header class="mb:32">
+        <div class="font:40 font:extrabold">reinstall: a better `daggumnpm`</div>
+        <div class="mt:16 f:fade-60">
+            <time>May 11, 2016</time>
+            </div>
+    </header><div class="
+    _:where(a):hover{text-decoration-color:fade}
+    _:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+    _:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+    _:where(code){font:90%;_v:middle}
+    _:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+    _:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+    _:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+    _:where(h1){font:40;_font:extrabold}
+    _:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+    _:where(h1,h2,h3,h4,h5,h6){mt:2em}
+    _:where(h2){mb:1em;_font:32}
+    _:where(h3){font:24}
+    _:where(h4){font:20}
+    _:where(h5){font:16}
+    _:where(h6){font:14}
+    _:where(li)::marker{font:fade-44;_font:fade-68@dark}
+    _:where(li){pl:.375em}
+    _:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+    _:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+    _:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+    >:first-child{mt:0!}
+    _:where(pre){p:20;_r:8;_overflow:auto}
+    _:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+    _:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+    _:where(table){width:full;_border-spacing:0}
+    _:where(td){v:baseline}
+    _:where(td,th):first-child{pl:0}
+    _:where(td,th):last-child{pr:0}
+    _:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+    _:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+    _:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+    _:where(ul){list-style-type:disc}
+    _:where(ul,ol,blockquote){pl:1.5em}
+    _:where(video,img){max-width:full}
+    _:where(a,mark){text-underline-offset:3}
+"><p><a href="/2016/02/18/daggumnpm/"><code>daggumnpm</code></a>, while fun, had a few rough edges. My
+workflow often involves running <code>daggumnpm</code> in a tmux session and working on
+something else while npm does it’s thing. When everything works this is great
+because I hear the friendly “<strong>Greetings, Dustan Kasten&hellip;</strong>” message when the
+install completes. However, when <code>npm install</code> fails I completely forget about
+that process for entirely too long.</p>
+<p>Whilst this could still be done with a single line bash alias, I’ve opted to
+use a more verbose implementation in the following little function <code>reinstall</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Reinstall package.json depenendencies. Do a full reinstall to avoid issues</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># with the resulting non-determinsitic tree that incremental `npm install`</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># creates.</span>
+</span></span><span style="display:flex;"><span>reinstall <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Reinstalling node dependencies. Please stand by.&#34;</span>
+</span></span><span style="display:flex;"><span>  rm -rf node_modules
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># if `npm install` has a positive exit code, we get our success message, but</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># in case it fails we still want to be notified.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># `say` is way cooler than `growl` for those that remember what that is.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> npm install ; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Greetings `git config user.name`. We have finished installing your node dependencies. With love from your benevolent NPM overlords.&#34;</span> &amp;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    say <span style="color:#e6db74">&#34;Our sincerest apologies, `git config user.name`. It appears as we have hit an error trying to install your node dependencies.&#34;</span> &amp;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></div>
+
+</article>
+<footer class="py:24">
+    <div class="f:fade-30 f:14 mb:8"></div>
+    <div class="f:fade-60 f:12">Theme forked from <a class="f:bold" href="https://github.com/serkodev/holy" _target="_blank">Holy</a></div>
+</footer>
+
+</div>
+    </div>
+</body>
+
+</html>
