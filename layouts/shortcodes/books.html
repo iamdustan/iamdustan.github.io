@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Book</th>
+      <th>Author</th>
+      <th>Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{ $data := index .Site.Data.books (.Get 0) }}
+  {{ range $data }}
+    <tr>
+      <td></td>
+      <td>{{ .name }}</td>
+      <td>{{ .author }}</td>
+      <td>{{ .completed }}</td>
+    </tr>
+  {{ end }}
+  </tbody>
+</table>
+
