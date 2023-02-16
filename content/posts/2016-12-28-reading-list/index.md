@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Books of 2016
-date: 2016-12-28T09:00:00-06:00 tags:
+date: 2016-12-28T09:00:00-06:00
+tags:
 - reading list
 summary:
 ---
