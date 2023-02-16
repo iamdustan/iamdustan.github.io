@@ -1,0 +1,36 @@
+- name: Professor Friby’s Mostly Adequate Guide to Functional Programming
+  author: Dr Boolean
+  completed: February 2
+- name: A Farewell to Mars
+  author: Brian Zahnd
+  completed: February 3
+- name: Earth Awakens
+  author: Orson Scott Card, Aaron Johnston
+  completed: February 28
+- name: Leaving Orbit
+  author: Margaret Lazarus
+  completed: March 4
+- name: Creativity, Inc
+  author: Ed Catmull
+  completed: April 29
+- name: The Rust Book
+  author: 
+  completed: May 2
+- name: The Art of Strategy
+  author: Avinash K. Dixit, Barry J. Nalebuff
+  completed: June 5
+- name: The Clean Coder
+  author: Robert C. Martin
+  completed: June 15
+- name: The Rise of the Robots
+  author: Martin Ford
+  completed: November 6
+- name: The Burning Light
+  author: Bradley Beaulieu, Rob Ziegler
+  completed: December 3
+- name: Mistborn
+  author: Brandon Sanderson
+  completed: December 10
+- name: The Well of Ascension
+  author: Brandon Sanderson
+  completed: December 28
