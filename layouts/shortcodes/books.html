@@ -1,7 +1,7 @@
 <table>
   <thead>
     <tr>
-      <th>#</th>
+      <th style="width: 2rem">#</th>
       <th>Book</th>
       <th>Author</th>
       <th>Completed</th>
@@ -9,9 +9,9 @@
   </thead>
   <tbody>
   {{ $data := index .Site.Data.books (.Get 0) }}
-  {{ range $data }}
+  {{ range $k, $data := $data }}
     <tr>
-      <td></td>
+      <td>{{ add $k 1 }} </td>
       <td>{{ .name }}</td>
       <td>{{ .author }}</td>
       <td>{{ .completed }}</td>

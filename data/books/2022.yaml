@@ -1,0 +1,78 @@
+- name: Harry Potter and the Half-Blood Prince
+  author: JK Rowling
+  completed: January 6
+- name: Harry Potter and the Deathly Hallows
+  author: JK Rowling
+  completed: January 15
+- name: Dopamine Nation
+  author: Anna Lembke, MD
+  completed: January 17
+- name: The Bear and the Nightingale
+  author: Katherine Arden
+  completed: January 30
+- name: The 1619 Project
+  author: Nikole Hannah-Jones
+  completed: January 31
+- name: Iron Gold
+  author: Pierce Brown
+  completed: February 13
+- name: Homo Deus
+  author: Yuvul Noah Harari
+  completed: March 22
+- name: Dark Age
+  author: Pierce Brown
+  completed: April 4
+- name: Lifespan
+  author: David A Sinclair
+  completed: April 8
+- name: The Subtle Art of Not Giving A F*ck
+  author: Mark Manson
+  completed: April 19
+- name: The Omnivore's Dilemma
+  author: Michael Pollan
+  completed: May 11
+- name: Mistborn, the Final Empire
+  author: Brandon Sanderson
+  completed: July 2
+- name: The Well of Ascension
+  author: Brandon Sanderson
+  completed: July 12
+- name: The Hero of Age
+  author: Brandon Sanderson
+  completed: July 21
+- name: The Alloy of Law
+  author: Brandon Sanderson
+  completed: August 16
+- name: Shadows of Self
+  author: Brandon Sanderson
+  completed: August 24
+- name: The Bands of Mourning
+  author: Brandon Sanderson
+  completed: August 31
+- name: Station Eleven
+  author: Emily St John Mandel
+  completed: September 12
+- name: Sleeping Giants
+  author: Sylvain Neuvel
+  completed: September 26
+- name: Waking Gods
+  author: Sylvain Neuvel
+  completed: September 29
+- name: Only Human
+  author: Sylvain Neuvel
+  completed: October 1
+- name: Black Sun
+  author: Rebecca Roanhorse
+  completed: October 9
+- name: Fevered Star
+  author: Rebecca Roanhorse
+  completed: October 22
+- name: A Master of Djinn
+  author: P. Djèlí Clark
+  completed: October 29
+- name: The Dichotomy of Leadership
+  author: Jocko Willink, Leif Babin
+  completed: November 27
+- name: The Lost Metal
+  author: Brandon Sanderson
+  completed: December 18
